@@ -334,12 +334,20 @@ const Hero = () => {
             <div className=" hero_paren  w-full center h-screen relative overflow-hidden">
                 <p className='  left_txt_2a text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
                 <p className=' right_txt_2a  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
-                <img className='-bottom-4 left-1/2 -translate-x-1/2 absolute z-[1] w-[7%]' src="/mono_white.png" alt="" />
+                {/* <img className='-bottom-4 left-1/2 -translate-x-1/2 absolute z-[1] w-[7%]' src="/mono_white.png" alt="" /> */}
+                <div className=" group  bottom-2 left-1/2 -translate-x-[30%] absolute shrink-0  z-[1] flex items-end">
+                    <div className=" shrink-0 size-[4vw] border-[2px] overflow-hidden   transition-colors group-hover:border-[#2e2d2b] border-white flex  relative   items-end">
+                        <img className='  w-[1.8vw] group-hover:invert-[.125] transition-all invert-[100]' src="/logo.png" alt="" />
+                        <div className=" shrink-0 size-[3.9vw] group-hover:bg-[#2e2d2b] transition-colors  bg-white    rotate_anim_box rotate-[-15deg]    translate-y-[-1.5vw] origin-center    translate-x-[0.17vw] ">
+                        </div>
+                    </div>
+                    <div className=" shrink-0 size-[4vw] transition-colors group-hover:border-[#2e2d2b] border-[2px] border-white    rotate_anim_box rotate-[-15deg]    origin-center translate-y-[-1.51vw]  translate-x-[-2vw] "></div>
+                </div>
                 <img
                     src="/Images/HeroImg.webp"
                     alt="loading"
                     priority
-                    
+
                     className="hero_bg_img top-0 left-0 h-full brightness-[.6] w-full object-cover"
                 />
                 <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
@@ -360,7 +368,7 @@ const Hero = () => {
                     <img
                         src="/Images/HomePage/heroSlider/Hero_animation_1.webp"
                         alt="loading"
-                        
+
                         className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
                     />
                 </div>
@@ -371,7 +379,7 @@ const Hero = () => {
                     <img
                         src="/Images/HomePage/heroSlider/Hero_animation_2.webp"
                         alt="loading"
-                        
+
                         className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
                     />
                 </div>
@@ -382,7 +390,7 @@ const Hero = () => {
                     <img
                         src="/Images/HomePage/heroSlider/Hero_animation_3.webp"
                         alt="loading"
-                        
+
                         className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
                     />
                 </div>
@@ -432,7 +440,7 @@ const Hero = () => {
                             <img
                                 src="/Images/HomePage/heroSlider/About_1.webp"
                                 alt="loading"
-                                
+
                                 className="sq_img_in_1 w-full h-full object-cover"
                             />
                         </div>
@@ -441,7 +449,7 @@ const Hero = () => {
                             <img
                                 src="/Images/HomePage/heroSlider/About_2.webp"
                                 alt="loading"
-                                
+
                                 className="sq_img_in_2 w-full h-full object-cover"
                             />
                         </div>
@@ -450,7 +458,7 @@ const Hero = () => {
                             <img
                                 src="/Images/HomePage/heroSlider/About_5.webp"
                                 alt="loading"
-                                
+
                                 className="sq_img_in_3 w-full h-full object-cover"
                             />
                         </div>
@@ -459,7 +467,7 @@ const Hero = () => {
                             <img
                                 src="/Images/HomePage/heroSlider/About_4.webp"
                                 alt="loading"
-                                
+
                                 className="sq_img_in_4 w-full h-full object-cover"
                             />
                         </div>
@@ -468,7 +476,7 @@ const Hero = () => {
                             <img
                                 src="/Images/HomePage/heroSlider/About_3.webp"
                                 alt="loading"
-                                
+
                                 className="sq_img_in_5 w-full h-full object-cover"
                             />
                         </div>

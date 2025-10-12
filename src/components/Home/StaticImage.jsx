@@ -30,7 +30,7 @@ const StaticImage = () => {
             },
             scale: 1,
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            duration: 3,
+            duration: 4,
             ease: "linear",
         })
         tl.fromTo(".show_reel_2", {

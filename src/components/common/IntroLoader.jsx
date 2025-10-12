@@ -49,6 +49,13 @@ const IntroLoader = () => {
 
     useEffect(() => {
 
+        gsap.to(".rotate_anim_box", {
+            rotation: "+=360",
+            duration: 20,
+            ease: "linear",
+            repeat: -1,
+        });
+
         gsap.to(".loader_div", {
             top: "15%",
             duration: 1.2,
@@ -99,7 +106,27 @@ const IntroLoader = () => {
                 <p className='left_txt text-xs lg:text-sm font-semibold  uppercase absolute top-1/2 left-1 -translate-y-1/2  text-white'>Looking for</p>
                 <p className='right_txt text-xs lg:text-sm font-semibold  uppercase absolute top-1/2 right-1 -translate-y-1/2  text-white'>new emotions ?</p>
                 <h2 className='center_txt text-2xl lg:text-4xl font-light uppercase absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white'>studio akto</h2>
-                <img className=' center_txt bottom-0 lg:-bottom-4 left-1/2 -translate-x-1/2 absolute w-[25%]  lg:w-[7%]' src="/mono_white.png" alt="" />
+
+                 <div className="  lg:hidden center_txt  bottom-2 left-1/2 -translate-x-[30%] absolute shrink-0  z-[1] flex items-end">
+                    <div className=" shrink-0  flex items-end relative">
+                        <div className=" shrink-0 size-[10vw] border-[.25vw] overflow-hidden  border-[#ffffff] flex  relative   items-end">
+                            <img className='w-[5vw] invert-[100]' src="/logo.png" alt="" />
+                            <div className=" shrink-0 size-[9.75vw]  bg-[#ffffff] rotate_anim_box    translate-y-[-6vw] origin-center   rotate-[-15deg] translate-x-[-0.6vw] ">
+                            </div>
+                        </div>
+                        <div className=" shrink-0 size-[10vw] border-[.25vw] border-[#ffffff] rotate_anim_box   rotate-[-15deg] origin-center translate-y-[-6vw]  translate-x-[-5.5vw] "></div>
+                    </div>
+                </div>
+
+                <div className=" hidden center_txt bottom-2 left-1/2 -translate-x-[30%] absolute shrink-0  lg:flex items-end">
+                    <div className=" shrink-0 size-[4vw] border-[2px] overflow-hidden   border-white flex  relative   items-end">
+                        <img className='  w-[1.8vw] invert-[100]' src="/logo.png" alt="" />
+                        <div className=" shrink-0 size-[3.9vw]  bg-white    rotate_anim_box rotate-[-15deg]    translate-y-[-1.5vw] origin-center    translate-x-[0.17vw] ">
+                        </div>
+                    </div>
+                    <div className=" shrink-0 size-[4vw] border-[2px] border-white    rotate_anim_box rotate-[-15deg]    origin-center translate-y-[-1.51vw]  translate-x-[-2vw] "></div>
+                </div>
+
             </div>
         </div>
     )

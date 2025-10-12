@@ -72,9 +72,9 @@ const ReviewSection = () => {
       <div className="w-full relative px-3 lg:px-10 py-16 lg:py-28">
         {/* Header */}
         <div className="w-full flex  lg:items-center justify-between">
-          <div className=" text-2xl lg:text-4xl uppercase flex">
+          <div className=" text-xl lg:text-4xl uppercase flex">
             <p className="whitespace-nowrap">what our</p>
-            <h2 className=" mx-2 lg:mx-3 italic">client</h2>
+            <h2 className=" mx-1.5 lg:mx-3 italic">client</h2>
             <p>say</p>
           </div>
           <div className=" w-full flex h-full  gap-2  lg:gap-5 justify-end lg:items-center">

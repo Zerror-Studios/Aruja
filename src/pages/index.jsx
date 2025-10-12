@@ -31,17 +31,17 @@ export default Home;
 export async function getStaticProps() {
   const meta = {
     title: "STUDIO AKTO — INTERIOR DESIGN STUDIO",
-    description: "We design proportion-led interiors for homes, workspaces, and hospitality.",
+    description: "ArujaK is a multidisciplinary interior design studio blending creativity with precision, crafting functional and inspiring spaces",
     canonical: "https://studioakto.com/",
     og: {
       title: "STUDIO AKTO — INTERIOR DESIGN STUDIO",
-      description: "Proportion-led interiors across residential, commercial & hospitality.",
+      description: "ArujaK is a multidisciplinary interior design studio blending creativity with precision, crafting functional and inspiring spaces",
       image: "https://www.studioakto.com/logo.png"
     },
     twitter: {
       card: "summary_large_image",
       title: "STUDIO AKTO — INTERIOR DESIGN STUDIO",
-      description: "Precision and design systems for contemporary spaces.",
+      description: "ArujaK is a multidisciplinary interior design studio blending creativity with precision, crafting functional and inspiring spaces",
       image: "https://www.studioakto.com/logo.png"
     },
     robots: "index,follow"

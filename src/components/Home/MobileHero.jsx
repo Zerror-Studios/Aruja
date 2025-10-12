@@ -160,41 +160,41 @@ const MobileHero = () => {
             duration: 1,
             ease: "linear",
         }, "parr");
-        tl.fromTo(".sq_img_in_1_mob", {
-            y: -80,
-        }, {
-            y: 80,
-            duration: 1,
-            ease: "linear",
-        }, "parr");
+        // tl.fromTo(".sq_img_in_1_mob", {
+        //     y: -80,
+        // }, {
+        //     y: 80,
+        //     duration: 1,
+        //     ease: "linear",
+        // }, "parr");
         tl.to(".sq_img_2_mob", {
             top: "-55vw",
             duration: 1,
             ease: "linear",
             delay: .5,
         }, "parr");
-        tl.fromTo(".sq_img_in_2_mob", {
-            y: -80,
-        }, {
-            y: 80,
-            duration: 1,
-            delay: .5,
-            ease: "linear",
-        }, "parr");
+        // tl.fromTo(".sq_img_in_2_mob", {
+        //     y: -80,
+        // }, {
+        //     y: 80,
+        //     duration: 1,
+        //     delay: .5,
+        //     ease: "linear",
+        // }, "parr");
         tl.to(".sq_img_3_mob", {
             top: "-55vw",
             duration: 1,
             ease: "linear",
             delay: 1,
         }, "parr");
-        tl.fromTo(".sq_img_in_3_mob", {
-            y: -80,
-        }, {
-            y: 80,
-            delay: 1,
-            duration: 1,
-            ease: "linear",
-        }, "parr");
+        // tl.fromTo(".sq_img_in_3_mob", {
+        //     y: -80,
+        // }, {
+        //     y: 80,
+        //     delay: 1,
+        //     duration: 1,
+        //     ease: "linear",
+        // }, "parr");
         tl.to(".about_div_mob", {
             y: -150,
             duration: 1,
@@ -219,12 +219,22 @@ const MobileHero = () => {
             <div className=" hero_paren_mob  w-full center h-screen relative overflow-hidden">
                 <p className='  left_txt_2a_mob text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
                 <p className=' right_txt_2a_mob  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
-                <img className='bottom-0 lg:-bottom-4 left-1/2 -translate-x-1/2 absolute w-[25%] z-[1]  lg:w-[7%]' src="/mono_white.png" alt="" />
+                <div className="   bottom-2 left-1/2 -translate-x-[30%] absolute shrink-0  z-[1] flex items-end">
+                    <div className=" shrink-0  flex items-end relative">
+                        <div className=" shrink-0 size-[10vw] border-[.25vw] overflow-hidden  border-[#ffffff] flex  relative   items-end">
+                            <img className='w-[5vw] invert-[100]' src="/logo.png" alt="" />
+                            <div className=" shrink-0 size-[9.75vw]  bg-[#ffffff] rotate_anim_box    translate-y-[-6vw] origin-center   rotate-[-15deg] translate-x-[-0.6vw] ">
+                            </div>
+                        </div>
+                        <div className=" shrink-0 size-[10vw] border-[.25vw] border-[#ffffff] rotate_anim_box   rotate-[-15deg] origin-center translate-y-[-6vw]  translate-x-[-5.5vw] "></div>
+                    </div>
+                </div>
+                {/* <img className='bottom-0 lg:-bottom-4 left-1/2 -translate-x-1/2 absolute w-[25%] z-[1]  lg:w-[7%]' src="/mono_white.png" alt="" /> */}
                 <img
                     src="/Images/HeroImg.webp"
                     alt="loading"
                     priority
-                    
+
                     className="hero_bg_img_mob top-0 left-0 h-full brightness-[.6] w-full object-cover"
                 />
                 <div className=" leading-none absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
@@ -248,7 +258,7 @@ const MobileHero = () => {
                     <img
                         src="/Images/HomePage/heroSlider/Hero_animation_1.webp"
                         alt="loading"
-                        
+
                         className="hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3]"
                     />
                 </div>
@@ -262,7 +272,7 @@ const MobileHero = () => {
                     <img
                         src="/Images/HomePage/heroSlider/Hero_animation_2.webp"
                         alt="loading"
-                        
+
                         className=" hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] "
                     />
                 </div>
@@ -270,7 +280,7 @@ const MobileHero = () => {
                     <div className="w-full h-screen relative flex-col gap-10 center text-center ">
                         <div className=" about_div_mob flex-col w-full h-full gap-10 center text-center">
                             <p className=' text-xs lg:text-base font-black'>ABOUT US</p>
-                            <div className="  lg:text-5xl flex flex-col  items-center   capitalize">
+                            <div className=" text-xl lg:text-5xl flex flex-col  items-center   capitalize">
                                 <div className='block relative overflow-hidden lg:pb-2'>
                                     <div className=" opa_slide_1_mob absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
                                     <p>
@@ -296,7 +306,7 @@ const MobileHero = () => {
                             >
                                 <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
                                     <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                                    <p className=' text-xs lg:text-base '>
+                                    <p className=' text-sm lg:text-base '>
                                         View more
                                     </p>
                                     <div className="block relative">
@@ -312,7 +322,7 @@ const MobileHero = () => {
                             <img
                                 src="/Images/HomePage/heroSlider/About_1.webp"
                                 alt="loading"
-                                
+
                                 className="sq_img_in_1_mob scale-110 w-full h-full object-cover"
                             />
                         </div>
@@ -321,7 +331,7 @@ const MobileHero = () => {
                             <img
                                 src="/Images/HomePage/heroSlider/About_2.webp"
                                 alt="loading"
-                                
+
                                 className="sq_img_in_2_mob scale-110 w-full h-full object-cover"
                             />
                         </div>
@@ -330,7 +340,7 @@ const MobileHero = () => {
                             <img
                                 src="/Images/HomePage/heroSlider/About_3.webp"
                                 alt="loading"
-                                
+
                                 className="sq_img_in_3_mob scale-110 w-full h-full object-cover"
                             />
                         </div>

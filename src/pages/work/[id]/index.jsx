@@ -12,23 +12,23 @@ import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const index = () => {
-  const meta = {
-    title: "STUDIO AKTO - WORK & PROJECTS ",
-    description: "Explore Studio AKTO's portfolio of interiors across residential, commercial, and hospitality spaces.",
-    canonical: "https://studioakto.com/work",
-    og: {
-      title: "STUDIO AKTO - WORK & PROJECTS ",
-      description: "Discover our portfolio of proportion-led interior design projects for homes, offices, and hospitality.",
-      image: "https://www.studioakto.com/logo.png" // You can replace with a hero image from your work page
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "STUDIO AKTO - WORK & PROJECTS ",
-      description: "Showcasing our curated interior design projects for contemporary spaces.",
-      image: "https://www.studioakto.com/logo.png" // Optional: replace with a project highlight image
-    },
-    robots: "index,follow"
-  };
+    const meta = {
+        title: "STUDIO AKTO - WORK & PROJECTS ",
+        description: "Explore Studio AKTO's portfolio of interiors across residential, commercial, and hospitality spaces.",
+        canonical: "https://studioakto.com/work",
+        og: {
+            title: "STUDIO AKTO - WORK & PROJECTS ",
+            description: "Discover our portfolio of proportion-led interior design projects for homes, offices, and hospitality.",
+            image: "https://www.studioakto.com/logo.png" // You can replace with a hero image from your work page
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "STUDIO AKTO - WORK & PROJECTS ",
+            description: "Showcasing our curated interior design projects for contemporary spaces.",
+            image: "https://www.studioakto.com/logo.png" // Optional: replace with a project highlight image
+        },
+        robots: "index,follow"
+    };
 
     const { navigate } = useNavigation();
     const router = useRouter();
@@ -121,38 +121,45 @@ const index = () => {
                     <img
                         src={work?.HeroImg}
                         alt="loading"
-                        
+
                         className=" paex_img brightness-[.6] w-full h-full object-cover"
                     />
                 </div>
                 <div className="absolute w-full bottom-20 lg:top-[30vw] px-3 lg:px-10 ">
-                    <div className=" id_anim_txt   translate-y-[105%] block overflow-hidden text-5xl  lg:text-8xl font-semibold uppercase leading-none">
-                        <p className='id_anim_txt   translate-y-[105%]'  >
+                    <div className=" id_anim_txt   translate-y-[105%] block overflow-hidden text-4xl  lg:text-8xl font-semibold uppercase leading-none">
+
+                        <p className='id_anim_txt lg:hidden   translate-y-[105%]'  >
+                            {work?.title}
+                        </p>
+                        <p className='id_anim_txt hidden lg:block   translate-y-[105%]'  >
                             {work?.title.split(" ").slice(0, 2).join(" ")}
                         </p>
                     </div>
-                    <div className="  block overflow-hidden text-5xl  lg:text-8xl font-semibold uppercase leading-none">
+                    <div className="hidden  lg:block overflow-hidden text-4xl  lg:text-8xl font-semibold uppercase leading-none">
                         <p className='id_anim_txt   translate-y-[105%]'  >
                             {work?.title.split(" ").slice(2).join(" ")}
                         </p>
                     </div>
 
-                    <div className="w-full text-xs md:text-base font-semibold mt-10 lg:mt-20 uppercase flex  justify-between md:grid md:grid-cols-12 ">
+                    <div className="w-full text-base md:text-base font-semibold mt-10 lg:mt-20 uppercase flex  justify-between md:grid md:grid-cols-12 ">
                         <div className="w-full md:col-span-6">
                             <div className="block overflow-hidden">
-                                <p className='id_anim_txt leading-none w-[60%]  translate-y-[105%]' >{work?.project_desc[0]}</p>
+                                <p className='id_anim_txt  leading-none w-full lg:w-[60%]  translate-y-[105%]' >{work?.project_desc[0]}</p>
                             </div>
                         </div>
-                        <div className="w-full  block overflow-hidden  md:col-span-2">
+                        <div className="w-full  hidden  lg:block overflow-hidden  md:col-span-2">
                             <p className='id_anim_txt   translate-y-[105%]' >{work?.project_location}</p>
                         </div>
-                        <div className="w-full  overflow-hidden flex justify-end whitespace-nowrap  md:col-span-4">
+                        <div className="w-full hidden  overflow-hidden lg:flex justify-end whitespace-nowrap  md:col-span-4">
                             <p className='id_anim_txt   translate-y-[105%]' >(scroll to explore)</p>
                         </div>
                     </div>
 
+                    <div className="w-full  lg:hidden mt-10 overflow-hidden  md:col-span-2">
+                        <p className='id_anim_txt uppercase   translate-y-[105%]' >{work?.project_location}</p>
+                    </div>
 
-                    <div className="w-full text-xs md:text-base grid uppercase grid-cols-4 md:grid-cols-12 ">
+                    <div className="w-full text-base md:text-base grid uppercase grid-cols-4 md:grid-cols-12 ">
 
                         <div className="w-full overflow-hidden opacity-0 hidden lg:block  lg:col-span-6 ">
                             <p className='id_anim_txt   translate-y-[105%]' >{work?.project_location}</p>
@@ -252,10 +259,10 @@ const index = () => {
                             <img
                                 src={item.img}
                                 alt="loading"
-                                
+
                                 className="object-cover w-full h-full"
                             />
-                            
+
                         </div>
                     );
                 })}

@@ -106,7 +106,7 @@ const StickyWork = () => {
           <div className=" w-full lg:ml-3 mb-5 h-fit text-xs lg:text-sm font-black">
             <p>OUR WORK</p>
           </div>
-          <div className=" lg:hidden  overflow-hidden leading-none uppercase text-2xl  md:text-[6vw] lg:space-y-5 w-full">
+          <div className=" lg:hidden  overflow-hidden leading-none uppercase text-xl  md:text-[6vw] lg:space-y-5 w-full">
             <div className="flex  flex-wrap w-full leading-none  gap-x-2">
               <p>Seamless  </p>
               <h2>design</h2>
@@ -118,12 +118,12 @@ const StickyWork = () => {
               <p>workplace</p>
             </div>
             <div className="w-full lg:flex justify-center">
-              <div className=" mt-5 w-[60%] md:w-[30%] lg:w-[20%] lg:text-center uppercase text-[12px] lg:text-sm">
-                <p>our interiors are designed to be functional, timeless, and personal.</p>
+              <div className=" mt-5 w-full leading-none md:w-[30%] lg:w-[20%] lg:text-center normal-case text-sm">
+                <p>Our interiors are designed to be functional, timeless, and personal.</p>
                 <button onClick={() => navigate(router, "/studio")}>
                   <div className=' mt-3 lg:mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
-                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                    <p className=' text-[12px] lg:text-sm '>
+                    <div className="w-[90%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-10%] bottom-0.5 right-0 absolute"></div>
+                    <p className='text-sm '>
                       View more
                     </p>
                     <div className="block relative">

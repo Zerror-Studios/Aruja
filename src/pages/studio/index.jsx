@@ -127,6 +127,8 @@ const index = () => {
 
     useEffect(() => {
 
+        if(window.innerWidth < 1024) return;
+
         gsap.to(".slide_ttx", {
             width: "100%",
             duration: 6,
@@ -621,19 +623,19 @@ const index = () => {
                 <div className="w-full py-20 lg:py-44 overflow-hidden center studio_desc">
                     <div className="  text-lg md:text-4xl lg:text-6xl leading-tight flex flex-col  items-center   capitalize">
                         <div className='block relative overflow-hidden pb-2'>
-                            <div className=" opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
+                            <div className=" hidden lg:block opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
                             <p className='whitespace-nowrap' >
                                 design is more than decoration
                             </p>
                         </div>
                         <div className="flex  relative overflow-hidden pb-2 pr-2 gap-2">
-                            <div className=" opa_slide_2 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
+                            <div className=" hidden lg:block opa_slide_2 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
                             <p className='whitespace-nowrap' >it’s about </p>
                             <h2 className='whitespace-nowrap' > <i>creating spaces</i> </h2>
                             <p className='whitespace-nowrap' >that flow with</p>
                         </div>
                         <div className='block relative overflow-hidden pb-2 '>
-                            <div className=" opa_slide_3 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
+                            <div className=" hidden lg:block opa_slide_3 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
                             <p className='whitespace-nowrap'  >purpose, proportion, and precision.</p>
                         </div>
                     </div>
@@ -680,8 +682,13 @@ const index = () => {
                         </div>
 
                         <div className=" hidden  w-full lg:flex justify-between">
-                            <div className=" h-full flex items-end ">
-                                <img className='w-[20%] -translate-y-2 ' src="/monogram.svg" alt="" />
+                            <div className="  relative shrink-0  flex items-end">
+                                <div className=" shrink-0 size-[6vw] border-[2px] overflow-hidden   transition-colors  border-[#2e2d2b] flex  relative   items-end">
+                                    <img className='  w-[3vw] invert-[.125] transition-all' src="/logo.png" alt="" />
+                                    <div className=" shrink-0 size-[5.9vw]  transition-colors  bg-[#2e2d2b]     rotate-[-15deg]    translate-y-[-3vw] rotate_anim_box origin-center    translate-x-[-1vw] ">
+                                    </div>
+                                </div>
+                                <div className=" shrink-0 size-[6vw] transition-colors  border-[2px] border-[#2e2d2b]     rotate-[-15deg]   rotate_anim_box  origin-center translate-y-[-3vw]  translate-x-[-3.9vw] "></div>
                             </div>
                             <div className="leading-tight text-lg w-[50%] capitalize font-semibold">
                                 <p className="text-end">

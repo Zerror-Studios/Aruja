@@ -9,7 +9,7 @@ const OrganizationSchema = () => {
     url: Const?.ClientLink || "",
     logo: {
       "@type": "ImageObject",
-      url: `${Const?.ClientLink || ""}/logo.png`, 
+      url: `${Const?.ClientLink || ""}/logo.png`,
       width: 160,
       height: 90,
     },
@@ -17,7 +17,7 @@ const OrganizationSchema = () => {
       "Studio AKTO is a design-led interior architecture practice specializing in contemporary, proportion-driven spaces.",
     sameAs: [
       "https://www.linkedin.com/company/studio-arujak",
-      "https://www.instagram.com/arujak?igsh=djZua2NuaGo1YTE5&utm_source=qr",
+      "https://www.instagram.com/studioakto?igsh=MWlyY3N0dHE5ZHRneg==",
     ],
     contactPoint: [
       {

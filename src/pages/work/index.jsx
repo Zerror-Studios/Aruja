@@ -206,15 +206,23 @@ const Index = () => {
       <div
         className="w-full pt-14 lg:pt-12  relative   flex-col justify-between">
         <div className="w-full  lg:flex px-3 mb-5 lg:mb-0 justify-center translate-y-[7vw] lg:translate-y-[4.1vw] overflow-hidden">
-          <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[15vw] ">
+          <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[17vw] lg:text-[15vw] ">
             <p className="wrk_anim_txt translate-y-[105%] ">our</p>
             <h2 className="wrk_anim_txt translate-y-[105%]  italic">work</h2>
           </div>
         </div>
 
         <div className="w-full relative   lg:flex items-center justify-center ">
-          <div className=" text-sm px-3 lg:text-base absolute  top-[8.5vw] lg:top-[4.1vw] z-[99] w-fit">
-            <div className="leading-none font-semibold">
+          <div className=" text-base px-3  absolute  top-[8.5vw] lg:top-[4.1vw] z-[99] lg:w-fit">
+            <div className=" w-full lg:hidden leading-none font-semibold">
+              <div className="block overflow-hidden">
+                <p className='wrk_anim_txt translate-y-[105%]'   >Every project at arujaK is crafted with flow, proportion, and precision. </p>
+              </div>
+              <div className="block  mt-1 overflow-hidden">
+                <p className='wrk_anim_txt translate-y-[105%]'   >Explore some of our featured spaces:</p>
+              </div>
+            </div>
+            <div className=" hidden lg:block leading-none font-semibold">
               <div className="block overflow-hidden">
                 <p className='wrk_anim_txt translate-y-[105%]'   >Every project at arujaK is crafted with</p>
               </div>
@@ -228,7 +236,7 @@ const Index = () => {
             <div className="flex mt-3 font-semibold gap-5">
               <button
                 onClick={() => setView("vertical")}
-                className={`  block overflow-hidden  uppercase text-sm transition-opacity duration-300 ${view === "vertical" ? "underline opacity-100" : "opacity-50"
+                className={`  block overflow-hidden  uppercase text-base lg:text-sm transition-opacity duration-300 ${view === "vertical" ? "underline opacity-100" : "opacity-50"
                   }`}
               >
                 <p className='wrk_anim_txt translate-y-[105%] '>
@@ -238,7 +246,7 @@ const Index = () => {
 
               <button
                 onClick={() => setView("horizontal")}
-                className={`  block overflow-hidden  uppercase text-sm transition-opacity duration-300 ${view === "horizontal" ? "underline opacity-100" : "opacity-50"
+                className={`  block overflow-hidden  uppercase text-base lg:text-sm transition-opacity duration-300 ${view === "horizontal" ? "underline opacity-100" : "opacity-50"
                   }`}
               >
                 <p className='wrk_anim_txt translate-y-[105%] '>
@@ -265,7 +273,7 @@ const Index = () => {
                   key={idx}
                   onClick={() => navigate(router, `/work/${item.id}`)}
                   className="shrink-0 cursor-pointer w-[80vw] md:w-[23.25vw] lg:w-[22.8vw] h-full">
-                  <div className="text-sm font-semibold block overflow-hidden mb-2 uppercase">
+                  <div className="text-base  font-semibold block overflow-hidden mb-2 uppercase">
                     <p className='wrk_anim_txt hori_wrk_anim_txt_title translate-y-[105%] '>
                       {item.title}
                     </p>
@@ -295,7 +303,7 @@ const Index = () => {
               key={idx}
               onClick={() => navigate(router, `/work/${item.id}`)}
               className="shrink-0 cursor-pointer w-full aspect-[14/9] lg:aspect-video">
-              <div className=" block overflow-hidden text-sm lg:text-base font-semibold mb-0.5 lg:mb-2 uppercase">
+              <div className=" block overflow-hidden text-base  font-semibold mb-0.5 lg:mb-2 uppercase">
                 <p
                   data-aos-anchor-placement="top-bottom"
                   data-aos="clip"
