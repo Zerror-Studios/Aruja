@@ -229,12 +229,9 @@ const MobileHero = () => {
                         <div className=" shrink-0 size-[10vw] border-[.25vw] border-[#ffffff] rotate_anim_box   rotate-[-15deg] origin-center translate-y-[-6vw]  translate-x-[-5.5vw] "></div>
                     </div>
                 </div>
-                {/* <img className='bottom-0 lg:-bottom-4 left-1/2 -translate-x-1/2 absolute w-[25%] z-[1]  lg:w-[7%]' src="/mono_white.png" alt="" /> */}
                 <img
                     src="/Images/HeroImg.webp"
                     alt="loading"
-                    priority
-
                     className="hero_bg_img_mob top-0 left-0 h-full brightness-[.8] w-full object-cover"
                 />
                 <div className=" leading-none absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">

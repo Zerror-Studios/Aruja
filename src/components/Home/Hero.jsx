@@ -346,8 +346,6 @@ const Hero = () => {
                 <img
                     src="/Images/HeroImg.webp"
                     alt="loading"
-                    priority
-
                     className="hero_bg_img top-0 left-0 h-full brightness-[.8] w-full object-cover"
                 />
                 <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">

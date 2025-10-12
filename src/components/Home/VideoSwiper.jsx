@@ -42,6 +42,7 @@ const VideoSwiper = () => {
 
 
     useEffect(() => {
+      console.log("object");
         if (swiperInstance && prevRef.current && nextRef.current) {
             swiperInstance.params.navigation.prevEl = prevRef.current;
             swiperInstance.params.navigation.nextEl = nextRef.current;
