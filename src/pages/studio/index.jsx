@@ -127,8 +127,6 @@ const index = () => {
 
     useEffect(() => {
 
-        if(window.innerWidth < 1024) return;
-
         gsap.to(".slide_ttx", {
             width: "100%",
             duration: 6,
@@ -141,6 +139,40 @@ const index = () => {
                 // markers: true,
             }
         })
+
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".studio_desc",
+                start: "top 70%",
+                end: "top 10%",
+                scrub: true,
+                // markers: true,
+            }
+
+        })
+        tl.to(".opa_slide_1", {
+            left: "100%",
+            duration: .8,
+            ease: "linear",
+        }, "parr");
+
+        tl.to(".opa_slide_2", {
+            left: "100%",
+            duration: .8,
+            delay: .8,
+            ease: "linear",
+        }, "parr");
+
+        tl.to(".opa_slide_3", {
+            left: "100%",
+            duration: .8,
+            delay: 1.6,
+            ease: "linear",
+        }, "parr");
+
+
+        if(window.innerWidth < 1024) return;
+
         gsap.fromTo(".parlx_img_eff", {
             y: -100,
         }, {
@@ -194,35 +226,7 @@ const index = () => {
         });
 
 
-        var tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".studio_desc",
-                start: "top 70%",
-                end: "top 10%",
-                scrub: true,
-                // markers: true,
-            }
-
-        })
-        tl.to(".opa_slide_1", {
-            left: "100%",
-            duration: .8,
-            ease: "linear",
-        }, "parr");
-
-        tl.to(".opa_slide_2", {
-            left: "100%",
-            duration: .8,
-            delay: .8,
-            ease: "linear",
-        }, "parr");
-
-        tl.to(".opa_slide_3", {
-            left: "100%",
-            duration: .8,
-            delay: 1.6,
-            ease: "linear",
-        }, "parr");
+        
 
     }, [])
 
@@ -602,7 +606,7 @@ const index = () => {
             <SeoHeader meta={meta} />
             <div className="w-full relative  pt-14 lg:pt-12 flex-col center">
                 <div className="w-full z-[99]  translate-y-[7vw] lg:translate-y-[4.1vw]  center block overflow-hidden">
-                    <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-2    flex center gap-2 lg:gap-6  uppercase text-[15vw]">
+                    <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-0    flex center gap-2 lg:gap-6  uppercase text-[16vw] lg:text-[15vw]">
                         <p className=" anim_txt translate-y-[100%]   ">The</p>
                         <h2 className=" anim_txt translate-y-[100%] italic   ">studio</h2>
                     </div>
@@ -623,19 +627,19 @@ const index = () => {
                 <div className="w-full py-20 lg:py-44 overflow-hidden center studio_desc">
                     <div className="  text-lg md:text-4xl lg:text-6xl leading-tight flex flex-col  items-center   capitalize">
                         <div className='block relative overflow-hidden pb-2'>
-                            <div className=" hidden lg:block opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
+                            <div className="  opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
                             <p className='whitespace-nowrap' >
                                 design is more than decoration
                             </p>
                         </div>
                         <div className="flex  relative overflow-hidden pb-2 pr-2 gap-2">
-                            <div className=" hidden lg:block opa_slide_2 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
+                            <div className="  opa_slide_2 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
                             <p className='whitespace-nowrap' >it’s about </p>
                             <h2 className='whitespace-nowrap' > <i>creating spaces</i> </h2>
                             <p className='whitespace-nowrap' >that flow with</p>
                         </div>
                         <div className='block relative overflow-hidden pb-2 '>
-                            <div className=" hidden lg:block opa_slide_3 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
+                            <div className="  opa_slide_3 absolute top-1 left-0 w-full h-full bg-[#fffdf6c0]"></div>
                             <p className='whitespace-nowrap'  >purpose, proportion, and precision.</p>
                         </div>
                     </div>

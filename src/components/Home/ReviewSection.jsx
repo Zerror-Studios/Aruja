@@ -69,7 +69,7 @@ const ReviewSection = () => {
 
   return (
     <div>
-      <div className="w-full relative px-3 lg:px-10 py-16 lg:py-28">
+      <div id="reviews" className="w-full relative px-3 lg:px-10 py-16 lg:py-28">
         {/* Header */}
         <div className="w-full flex  lg:items-center justify-between">
           <div className=" text-xl lg:text-4xl uppercase flex">

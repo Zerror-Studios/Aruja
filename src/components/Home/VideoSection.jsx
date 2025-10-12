@@ -4,7 +4,7 @@ import CustomEase from 'gsap/dist/CustomEase'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
-const StaticImage = () => {
+const VideoSection = () => {
 
     useEffect(() => {
         let tl = gsap.timeline({
@@ -148,4 +148,4 @@ const StaticImage = () => {
     )
 }
 
-export default StaticImage
+export default VideoSection

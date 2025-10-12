@@ -3,9 +3,10 @@ import IntroLoader from "@/components/common/IntroLoader";
 import Hero from "@/components/Home/Hero";
 import MobileHero from "@/components/Home/MobileHero";
 import ReviewSection from "@/components/Home/ReviewSection";
-import StaticImage from "@/components/Home/StaticImage";
+import VideoSection from "@/components/Home/VideoSection";
 import StickyWork from "@/components/Home/StickyWork";
 import SeoHeader from "@/components/seo/SeoHeader";
+import VideoSwiper from "@/components/Home/VideoSwiper";
 
 const Home = ({ meta }) => {
 
@@ -19,7 +20,12 @@ const Home = ({ meta }) => {
       <div className="hidden lg:block w-full">
         <Hero />
       </div>
-      <StaticImage />
+      <div className="lg:hidden w-full">
+        <VideoSwiper />
+      </div>
+      <div className="hidden lg:block w-full">
+        <VideoSection />
+      </div>
       <StickyWork />
       <ReviewSection />
     </>

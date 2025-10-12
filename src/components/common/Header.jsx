@@ -94,6 +94,19 @@ const Header = () => {
               services
             </p>
           </div>
+          {
+            currentPath === "/" && (
+              <a
+                href='#reviews'
+                onClick={() => closeMenu()}
+                className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+                <p className='anii'>
+                  reviews
+                </p>
+              </a>
+            )
+          }
 
 
           <div
@@ -146,6 +159,19 @@ const Header = () => {
               services
             </p>
           </a>
+
+          {
+            currentPath === "/" && (
+              <a
+                href="#reviews"
+                // onClick={() => navigate(router, "/services")}
+                className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
+                <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
+                <p className='font-semibold'>
+                  reviews
+                </p>
+              </a>
+            )}
 
 
 

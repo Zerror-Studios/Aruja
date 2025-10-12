@@ -235,7 +235,7 @@ const MobileHero = () => {
                     alt="loading"
                     priority
 
-                    className="hero_bg_img_mob top-0 left-0 h-full brightness-[.6] w-full object-cover"
+                    className="hero_bg_img_mob top-0 left-0 h-full brightness-[.8] w-full object-cover"
                 />
                 <div className=" leading-none absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase text-center text-white   lg:text-5xl font-semibold">
                     <div className="block overflow-hidden">
