@@ -24,7 +24,7 @@ const Footer = () => {
     });
   })
   return (
-    <div className="w-full  border-t border-black/20 py-5 lg:py-0 p-3 lg:p-10 ">
+    <div className="w-full  border-t border-black/20 py-5 lg:py-5 p-3 lg:p-10 ">
       <div className="flex h-[40vw] lg:h-[25vw] ">
         <div className=" flex items-end pb-2 lg:pb-0 ">
           <div className=" shrink-0  flex items-end relative">
