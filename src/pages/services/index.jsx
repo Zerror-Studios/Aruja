@@ -103,7 +103,7 @@ const meta = {
         <div>
             <SeoHeader meta={meta} />
 
-            <div id='services' className=" serv_slider_paren w-full center  text-[#FFFDF6] h-screen relative">
+            <div id='services' className=" serv_slider_paren w-full center  text-[#FFFDF6] h-[100dvh] lg:h-screen relative">
                 <img
                     className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/services/servImg4.webp" alt="loading" />
                 <img

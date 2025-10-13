@@ -268,7 +268,7 @@ const index = () => {
                 })}
             </div>
 
-            <div className="w-full  font-light gap-5 text-2xl lg:text-3xl border-t h-10 lg:h-20 border-black/20 center uppercase flex justify-between">
+            <div className="w-full  font-light gap-5 text-base lg:text-3xl border-t h-10 lg:h-20 border-black/20 center uppercase flex justify-between">
                 <button
                     className="flex group gap-2 items-center group"
                     onClick={() => {

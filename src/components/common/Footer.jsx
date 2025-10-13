@@ -24,22 +24,22 @@ const Footer = () => {
     });
   })
   return (
-    <div className="w-full  border-t border-black/20 p-3 lg:p-10  items-stretch">
-      <div className="flex items-stretch">
-        <div className=" flex items-end aspect-[3/4]">
+    <div className="w-full  border-t border-black/20 py-5 lg:py-0 p-3 lg:p-10 ">
+      <div className="flex h-[40vw] lg:h-[25vw] ">
+        <div className=" flex items-end pb-2 lg:pb-0 ">
           <div className=" shrink-0  flex items-end relative">
-            <div className=" shrink-0 size-[10vw] border-[.25vw] overflow-hidden  border-[#2e2d2b] flex  relative   items-end">
-              <img className='w-[5vw] invert-[.125]' src="/logo.png" alt="" />
-              <div className=" shrink-0 size-[9.75vw]  bg-[#2e2d2b] rotate_anim_box    translate-y-[-6vw] origin-center   rotate-[-15deg] translate-x-[-0.6vw] ">
+            <div className=" shrink-0 size-[15vw] lg:size-[10vw] border-[.25vw] overflow-hidden  border-[#2e2d2b] flex  relative   items-end">
+              <img className='w-[10vw] lg:w-[5vw] invert-[.125]' src="/logo.png" alt="" />
+              <div className=" shrink-0 size-[14.75vw] lg:size-[9.75vw]  bg-[#2e2d2b] rotate_anim_box    translate-y-[-6vw] origin-center   rotate-[-15deg] translate-x-[-0.6vw] ">
               </div>
             </div>
-            <div className=" shrink-0 size-[10vw] border-[.25vw] border-[#2e2d2b] rotate_anim_box   rotate-[-15deg] origin-center translate-y-[-6vw]  translate-x-[-5.5vw] "></div>
+            <div className=" shrink-0 size-[15vw] lg:size-[10vw] border-[.25vw] border-[#2e2d2b] rotate_anim_box   rotate-[-15deg] origin-center translate-y-[-6vw]  translate-x-[-5.5vw] "></div>
           </div>
         </div>
 
         <div className="w-full flex flex-col justify-between pl-3 lg:pl-10">
           <div className="w-full flex justify-between">
-            <div className=" text-base md:text-4xl flex flex-col lg:gap-y-4 uppercase">
+            <div className=" text-base md:text-4xl flex flex-col gap-y-2 lg:gap-y-4 uppercase">
               {navLinks.map((link, i) =>
                 <div
                   onClick={() => navigate(router, link.path)}
@@ -50,7 +50,7 @@ const Footer = () => {
               )}
             </div>
 
-            <div className="uppercase flex flex-col items-end lg:items-start gap-y-0 lg:gap-y-2">
+            <div className="uppercase flex flex-col items-end lg:items-start gap-y-2">
               <a href="https://www.instagram.com/studioakto?igsh=MWlyY3N0dHE5ZHRneg==" target="_blank" rel="noopener noreferrer" >
                 <button>
                   <div className='  text-sm lg:text-base relative w-fit group overflow-hidden uppercase flex items-center lg:gap-2'>
@@ -87,7 +87,7 @@ const Footer = () => {
 
           <div className="w-full opacity-0 lg:opacity-100 uppercase leading-none">
             <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWstvLCXWRKfPgPVdpPPtmlcPZDpTBtzcGnkzhMGvWzMzxmzCnKrGJjfXGsbKkzvjPnTsFQgb">
-              <p className="w-full lg:translate-y-3 text-[5vw] md:text-[6.6vw]">hello@arujak.com</p>
+              <p className="w-full lg:translate-y-3 text-[5vw] md:text-[7.1vw]">hello@arujak.com</p>
             </a>
           </div>
         </div>

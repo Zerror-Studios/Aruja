@@ -616,7 +616,7 @@ const index = () => {
                     style={{
                         clipPath: "polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)"
                     }}
-                    className=" mt-6  lg:mt-10 stic_image_pent_c w-full h-[100vh] lg:h-[140vh] relative overflow-hidden center">
+                    className=" mt-6  lg:mt-10 stic_image_pent_c w-full h-[70vh] lg:h-[140vh] relative overflow-hidden center">
                     <img
                         src="/Images/studioPage/studio_hero.webp"
                         alt="loading"

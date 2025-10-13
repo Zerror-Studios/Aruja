@@ -130,28 +130,28 @@ const MobileHero = () => {
 
         tl.to(".opa_slide_1_mob", {
             left: "100%",
-            duration: .8,
+            duration: .6,
             ease: "linear",
         }, "parr");
 
         tl.to(".opa_slide_2_mob", {
             left: "100%",
-            duration: .8,
-            delay: .8,
+            duration: .6,
+            delay: .6,
             ease: "linear",
         }, "parr");
 
         tl.to(".opa_slide_3_mob", {
             left: "100%",
-            duration: .8,
-            delay: 1.6,
+            duration: .6,
+            delay: 1.2,
             ease: "linear",
         }, "parr");
 
         tl.to(".opa_slide_4_mob", {
             left: "100%",
-            duration: .8,
-            delay: 2.4,
+            duration: .6,
+            delay: 2,
             ease: "linear",
         }, "parr");
 
@@ -187,6 +187,12 @@ const MobileHero = () => {
             ease: "linear",
             delay: 1,
         }, "parr");
+        tl.to(".sq_img_4_mob", {
+            top: "-55vw",
+            duration: 1,
+            ease: "linear",
+            delay: 1.5,
+        }, "parr");
         // tl.fromTo(".sq_img_in_3_mob", {
         //     y: -80,
         // }, {
@@ -195,18 +201,18 @@ const MobileHero = () => {
         //     duration: 1,
         //     ease: "linear",
         // }, "parr");
-        tl.to(".about_div_mob", {
-            y: -150,
-            duration: 1,
-            ease: "linear",
-            delay: 2.3,
-        }, "parr");
-        tl.to(".number_div_mob", {
-            bottom: " 10vh",
-            duration: 1,
-            ease: "linear",
-            delay: 2.3,
-        }, "parr");
+        // tl.to(".about_div_mob", {
+        //     y: -150,
+        //     duration: 1,
+        //     ease: "linear",
+        //     delay: 2.3,
+        // }, "parr");
+        // tl.to(".number_div_mob", {
+        //     bottom: " 10vh",
+        //     duration: 1,
+        //     ease: "linear",
+        //     delay: 2.3,
+        // }, "parr");
 
 
 
@@ -342,7 +348,16 @@ const MobileHero = () => {
                             />
                         </div>
 
-                        <div className=" number_div_mob w-full absolute bottom-[-20vh] left-0 h-[20vh]    grid space-y-5 md:space-y-0 content-center  grid-cols-1 md:flex md:items-center md:justify-between px-3 md:px-24">
+                        <div className="sq_img_4_mob aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw]">
+                            <img
+                                src="/Images/HomePage/heroSlider/About_4.webp"
+                                alt="loading"
+
+                                className="sq_img_in_4_mob scale-110 w-full h-full object-cover"
+                            />
+                        </div>
+
+                        <div className=" hidden number_div_mob w-full absolute bottom-[-20vh] left-0 h-[20vh]    lg:grid space-y-5 md:space-y-0 content-center  grid-cols-1 md:flex md:items-center md:justify-between px-3 md:px-24">
                             <div className="text-start flex items-center justify-between  ">
                                 <h2 className=' text-5xl lg:text-8xl'>15+</h2>
                                 <p className='uppercase text-xs lg:text-sm font-extrabold'>projects</p>
@@ -365,6 +380,24 @@ const MobileHero = () => {
                 </div>
 
 
+            </div>
+            <div className=" lg:hidden number_div_mob w-full  mb-14 grid space-y-5 md:space-y-0 content-center  grid-cols-1 md:flex md:items-center md:justify-between px-3 md:px-24">
+                <div className="text-start flex items-center justify-between  ">
+                    <h2 className=' text-5xl lg:text-8xl'>15+</h2>
+                    <p className='uppercase text-xs lg:text-sm font-extrabold'>projects</p>
+                </div>
+                <div className=" text-start flex items-center justify-between ">
+                    <div className=' text-5xl lg:text-8xl flex justify-start items-center'> <h2> 45K+</h2> <p className=' text-xl md:text-3xl lowercase md:-translate-y-[3px]'>SQ. ft.</p> </div>
+                    <p className='uppercase text-xs lg:text-sm font-extrabold'>Space Designed</p>
+                </div>
+                <div className=" text-start flex items-center justify-between ">
+                    <div className=' text-5xl lg:text-8xl flex  justify-start items-center'> <h2> 5+</h2> <p className='text-xl md:text-3xlcapitalize  md:-translate-y-[2px]'>Yrs</p> </div>
+                    <p className='uppercase text-xs lg:text-sm font-extrabold'>Experience</p>
+                </div>
+                <div className="text-start flex items-center justify-between ">
+                    <h2 className=' text-5xl lg:text-8xl'>100%</h2>
+                    <p className='uppercase text-xs lg:text-sm font-extrabold'>Transparency</p>
+                </div>
             </div>
         </div>
     )

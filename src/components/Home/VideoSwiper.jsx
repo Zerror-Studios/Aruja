@@ -55,10 +55,10 @@ const VideoSwiper = () => {
     return (
         <div className=" w-full h-screen  relative  ">
             <div className="absolute top-[45%] z-[2] w-full ">
-                <div className="flex  justify-between ">
+                <div className="flex  justify-between px-3 ">
                     <button
                         ref={prevRef}
-                        className={`size-10 center  shrink-0 text-[#ffffff] rounded-full border  z-10 transition-opacity duration-300 ${currentSlide === 0 ? ' text-black opacity-40 cursor-not-allowed' : ''
+                        className={`size-8 center  shrink-0 text-[#ffffff] rounded-full border  z-10 transition-opacity duration-300 ${currentSlide === 0 ? ' text-black opacity-40 cursor-not-allowed' : ''
                             }`}
                     >
                         <p className="-translate-y-[1px]" >
@@ -68,7 +68,7 @@ const VideoSwiper = () => {
                     </button>
                     <button
                         ref={nextRef}
-                        className={`size-10 center  shrink-0 text-[#ffffff] rounded-full border  z-10 transition-opacity duration-300 ${currentSlide === totalSlides - 1 ? ' text-black opacity-40 cursor-not-allowed' : ''
+                        className={`size-8 center  shrink-0 text-[#ffffff] rounded-full border  z-10 transition-opacity duration-300 ${currentSlide === totalSlides - 1 ? ' text-black opacity-40 cursor-not-allowed' : ''
                             }`}
                     >
                         <p className="-translate-y-[1px]" >→</p>
