@@ -101,7 +101,7 @@ const StickyWork = () => {
 
   return (
     <div>
-      <div className="w-full px-3 lg:px-10 pt-14 lg:pt-28">
+      <div className="w-full px-3 lg:px-10 py-14 lg:pt-28">
         <div className="w-full relative mb-8 lg:mb-20  flex flex-col  items-center">
           <div className=" w-full lg:ml-3 mb-5 h-fit text-xs lg:text-sm font-black">
             <p>OUR WORK</p>

@@ -7,6 +7,7 @@ import VideoSection from "@/components/Home/VideoSection";
 import StickyWork from "@/components/Home/StickyWork";
 import SeoHeader from "@/components/seo/SeoHeader";
 import VideoSwiper from "@/components/Home/VideoSwiper";
+import ServiceSlider from "./services";
 
 const Home = ({ meta }) => {
 
@@ -27,6 +28,7 @@ const Home = ({ meta }) => {
         <VideoSection />
       {/* </div> */}
       <StickyWork />
+      <ServiceSlider/>
       <ReviewSection />
     </>
   );

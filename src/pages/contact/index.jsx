@@ -59,8 +59,8 @@ const index = () => {
                     className=" ctct_clip_div h-[40%]  lg:h-full w-full center lg:w-[25%]">
                     <img className="w-full h-full object-cover" src="/Images/ContactPageImg.webp" alt="" />
                 </div>
-                <div className=" h-[60%]  lg:h-full w-full lg:w-[75%] relative flex flex-col lg:flex-row items-end gap-y-5  pb-5 lg:gap-y-5 justify-end">
-                    <div className=" lg:hidden  marq_op opacity-0 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full ">
+                <div className=" h-[60%]   lg:h-full w-full lg:w-[75%] relative flex flex-col lg:flex-row items-end gap-y-5  pb-5 lg:gap-y-5 justify-end">
+                    <div className=" lg:hidden  marq_op opacity-0 mb-10 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full ">
                         <Marquee gradient gradientWidth={50} className='   h-full w-full scroller_none ' >
                             <p className='h-full  ml-[10vw] flex gap-10 items-center'>
                                 “Got a Thought? <img className='w-8' src="/monogram.svg" alt="" />
@@ -87,7 +87,7 @@ const index = () => {
                             <div className=" w-full flex  lg:flex-col justify-start leading-none lg:w-1/2">
                                 <div className=' w-[35%]  block overflow-hidden   '>
                                     <p className='ctct_anim_txt mt-1 lg:mt-0 mb-1 text-xs lg:text-sm font-black translate-y-[105%]'  >
-                                        Write US
+                                        email
                                     </p>
                                 </div>
                                 <div className='  block overflow-hidden'>
@@ -98,7 +98,7 @@ const index = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className=" w-full flex  lg:flex-col justify-start leading-none lg:w-1/2">
+                            {/* <div className=" w-full flex  lg:flex-col justify-start leading-none lg:w-1/2">
                                 <div className='   w-[35%] block overflow-hidden   '>
                                     <p className='ctct_anim_txt mt-1 lg:mt-0 mb-1 text-xs lg:text-sm font-black translate-y-[105%]'  >
                                       pan india
@@ -111,14 +111,14 @@ const index = () => {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="flex flex-col gap-y-5 mt-5 lg:mt-0 lg:flex-row w-full justify-between">
 
                             <div className=" w-full flex  lg:flex-col justify-start leading-none lg:w-1/2">
                                 <div className='  w-[35%]  block overflow-hidden   '>
                                     <p className='ctct_anim_txt mt-1 lg:mt-0 mb-1 text-xs lg:text-sm font-black translate-y-[105%]'  >
-                                        talk to US
+                                        contact
                                     </p>
                                 </div>
                                 <div className='  block overflow-hidden'>
@@ -132,7 +132,7 @@ const index = () => {
                             <div className="  w-full flex  lg:flex-col justify-start leading-none lg:w-1/2 uppercase ">
                                 <div className='  w-[35%] block overflow-hidden   '>
                                     <p className='ctct_anim_txt mt-1 lg:mt-0 mb-1 text-xs lg:text-sm font-black translate-y-[105%]'  >
-                                        follow us
+                                        socials
                                     </p>
                                 </div>
                                 <div className="flex gap-5 lg:gap-10 ">
