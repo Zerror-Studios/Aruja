@@ -20,12 +20,12 @@ const Home = ({ meta }) => {
       <div className="hidden lg:block w-full">
         <Hero />
       </div>
-      <div className="lg:hidden w-full">
+      {/* <div className="lg:hidden w-full">
         <VideoSwiper />
-      </div>
-      <div className="hidden lg:block w-full">
+      </div> */}
+      {/* <div className="hidden lg:block w-full"> */}
         <VideoSection />
-      </div>
+      {/* </div> */}
       <StickyWork />
       <ReviewSection />
     </>
