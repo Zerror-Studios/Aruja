@@ -70,18 +70,21 @@ const index = () => {
         if (!id) return;
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         gsap.set(".id_anim_txt", { yPercent: 105 });
-        gsap.to(".paex_img", {
-            y: 500,
-            duration: 4,
-            ease: "linear",
-            scrollTrigger: {
-                trigger: ".stic_image_pent",
-                start: "top top",
-                end: "bottom top",
-                scrub: true,
-                // markers: true,
-            },
-        });
+
+        if (window.innerWidth >= 1024) {
+            gsap.to(".paex_img", {
+                y: 500,
+                duration: 4,
+                ease: "linear",
+                scrollTrigger: {
+                    trigger: ".stic_image_pent",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                    // markers: true,
+                },
+            });
+        }
 
         gsap.fromTo(".id_anim_txt_2", {
             clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
@@ -121,7 +124,6 @@ const index = () => {
                     <img
                         src={work?.HeroImg}
                         alt="loading"
-
                         className=" paex_img brightness-[.6] w-full h-full object-cover"
                     />
                 </div>

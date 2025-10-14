@@ -91,9 +91,9 @@ const index = () => {
                                     </p>
                                 </div>
                                 <div className='  block overflow-hidden'>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWstvLCXWRKfPgPVdpPPtmlcPZDpTBtzcGnkzhMGvWzMzxmzCnKrGJjfXGsbKkzvjPnTsFQgb">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHVwvZPMrDzDbcCPPphsTmqGmtbrPBpLRXJTJpDMRnthvkfVgnrWvdpMQGbdfBCkcVBcL">
                                         <p className='ctct_anim_txt text-lg lg:text-2xl translate-y-[105%]'  >
-                                            hello@arujak.com
+                                            hello@studioakto.com
                                         </p>
                                     </a>
                                 </div>
@@ -101,18 +101,13 @@ const index = () => {
                             <div className=" w-full flex  lg:flex-col justify-start leading-none lg:w-1/2">
                                 <div className='   w-[35%] block overflow-hidden   '>
                                     <p className='ctct_anim_txt mt-1 lg:mt-0 mb-1 text-xs lg:text-sm font-black translate-y-[105%]'  >
-                                        find US
+                                      pan india
                                     </p>
                                 </div>
                                 <div className='  block overflow-hidden'>
                                     <div className="block overflow-hidden">
-                                        <p className='ctct_anim_txt text-lg lg:text-2xl translate-y-[105%]'  >
-                                            Rajasthan,
-                                        </p>
-                                    </div>
-                                    <div className="block overflow-hidden">
-                                        <p className='ctct_anim_txt text-lg lg:text-2xl translate-y-[105%]'  >
-                                            india
+                                        <p className='ctct_anim_txt leading-none text-lg lg:text-2xl translate-y-[105%]'  >
+                                            Rajasthan, india
                                         </p>
                                     </div>
                                 </div>

@@ -86,15 +86,15 @@ const Footer = () => {
           </div>
 
           <div className="w-full opacity-0 lg:opacity-100 uppercase leading-none">
-            <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWstvLCXWRKfPgPVdpPPtmlcPZDpTBtzcGnkzhMGvWzMzxmzCnKrGJjfXGsbKkzvjPnTsFQgb">
-              <p className="w-full lg:translate-y-3 text-[5vw] md:text-[7.1vw]">hello@arujak.com</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHVwvZPMrDzDbcCPPphsTmqGmtbrPBpLRXJTJpDMRnthvkfVgnrWvdpMQGbdfBCkcVBcL">
+              <p className="w-full lg:translate-y-3 text-[5vw] md:text-[5.6vw]">hello@studioakto.com</p>
             </a>
           </div>
         </div>
       </div>
       <div className="w-full center mt-2  lg:hidden uppercase leading-none">
-        <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWstvLCXWRKfPgPVdpPPtmlcPZDpTBtzcGnkzhMGvWzMzxmzCnKrGJjfXGsbKkzvjPnTsFQgb">
-          <p className=" lg:hidden lg:translate-y-3 text-[9.2vw]">hello@arujak.com</p>
+        <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHVwvZPMrDzDbcCPPphsTmqGmtbrPBpLRXJTJpDMRnthvkfVgnrWvdpMQGbdfBCkcVBcL">
+          <p className=" lg:hidden lg:translate-y-3 text-[7.5vw]">hello@studioakto.com</p>
         </a>
       </div>
     </div>

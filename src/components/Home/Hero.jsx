@@ -398,7 +398,7 @@ const Hero = () => {
                             <p className=' text-xs lg:text-base font-black'>ABOUT US</p>
                             <div className="  lg:text-5xl flex flex-col  items-center   capitalize">
                                 <div className='block relative overflow-hidden lg:pb-2'>
-                                    <div className=" opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
+                                    <div className=" opa_slide_1 absolute top-1 left-[32%] w-full h-full bg-[#fffdf6c0]"></div>
                                     <p>
                                         At AKTO, design is more than
                                     </p>
