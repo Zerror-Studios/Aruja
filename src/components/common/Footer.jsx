@@ -9,9 +9,9 @@ const Footer = () => {
   const { navigate } = useNavigation();
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "the studio", path: "/studio" },
-    { name: "our work", path: "/work" },
+    { name: "work", path: "/work" },
+    { name: "studio", path: "/studio" },
+    { name: "services", path: "/services" },
     { name: "contact", path: "/contact" },
   ];
 
