@@ -114,15 +114,15 @@ const VideoSection = () => {
                         <h2> /</h2>
                         <h2>3</h2>
                     </div>
-                    <div className=" det_1 absolute w-full flex items-center text-center md:text-start flex-col md:flex-row md:justify-between px-3 lg:px-10">
-                        <div className="md:w-[20%]">
+                    <div className=" det_1 absolute w-full flex items-center text-center md:text-start flex-col md:flex-row md:justify-center px-3 lg:px-10">
+                        {/* <div className="md:w-[20%]">
                             <p className=' text-sm lg:text-base uppercase'>Jaipur</p>
                             <p className=' md:hidden text-sm lg:text-base uppercase'>Rajasthan</p>
-                        </div>
-                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>Vivanta Apartment</h2>
-                        <div className="hidden md:block w-[20%] text-end">
+                        </div> */}
+                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>living rooms </h2>
+                        {/* <div className="hidden md:block w-[20%] text-end">
                             <p className=' text-sm lg:text-base uppercase'>Rajasthan</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div
@@ -134,15 +134,15 @@ const VideoSection = () => {
                         <h2> /</h2>
                         <h2>3</h2>
                     </div>
-                    <div className=" det_2 absolute w-full flex items-center text-center md:text-start flex-col md:flex-row md:justify-between px-3 lg:px-10">
-                        <div className="md:w-[20%]  md:text-start">
+                    <div className=" det_2 absolute w-full flex items-center text-center md:text-start flex-col md:flex-row md:justify-center px-3 lg:px-10">
+                        {/* <div className="md:w-[20%]  md:text-start">
                             <p className=' text-sm lg:text-base uppercase'>Jaipur</p>
                             <p className=' md:hidden text-sm lg:text-base uppercase'>Rajasthan</p>
-                        </div>
-                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>RIDANKO Office</h2>
-                        <div className=" hidden md:block w-[20%] text-end">
+                        </div> */}
+                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>Kitchens </h2>
+                        {/* <div className=" hidden md:block w-[20%] text-end">
                             <p className=' text-sm lg:text-base uppercase'>Rajasthan</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div
@@ -154,15 +154,15 @@ const VideoSection = () => {
                         <h2> /</h2>
                         <h2>3</h2>
                     </div>
-                    <div className="absolute w-full flex items-center text-center md:text-start flex-col md:flex-row md:justify-between px-3 lg:px-10">
-                        <div className="md:w-[20%] whitespace-nowrap  md:text-start">
+                    <div className="absolute w-full flex items-center text-center md:text-start flex-col md:flex-row md:justify-center px-3 lg:px-10">
+                        {/* <div className="md:w-[20%] whitespace-nowrap  md:text-start">
                             <p className=' text-sm lg:text-base uppercase'>Jaipur</p>
                             <p className=' md:hidden text-sm lg:text-base uppercase'>Rajasthan</p>
-                        </div>
-                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>Moodboards</h2>
-                        <div className=" hidden md:block w-[20%] text-end">
+                        </div> */}
+                        <h2 className=' mt-5 md:mt-0 text-4xl text-center lg:text-7xl uppercase '>Bedrooms </h2>
+                        {/* <div className=" hidden md:block w-[20%] text-end">
                             <p className=' text-sm lg:text-base uppercase'>Rajasthan</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
