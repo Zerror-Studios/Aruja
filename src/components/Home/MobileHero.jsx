@@ -53,7 +53,7 @@ const MobileHero = () => {
             scrollTrigger: {
                 trigger: ".hero_paren_mob",
                 start: "top top",
-                end: "+400% top",
+                end: "+600% top",
                 anticipatePin: 1,
                 scrub: true,
                 pin: true,
@@ -72,57 +72,57 @@ const MobileHero = () => {
             ]
         }, "hello")
 
-        // tl.to(".hero_slide_1_mob_img_mob", {
-        //     scale: 1,
-        //     ease: "linear",
-        //     transformOrigin: "center center",
-        //     willChange: "transform",
-        //     delay: .7,
-        //     duration: 1,
-        //     onComplete: function () {
-        //         tl.to(".left_txt_2a_mob ,.right_txt_2a_mob", {
-        //             opacity: 0,
-        //             duration: 0,
-        //         });
-        //     },
-        //     onReverseComplete: function () {
-        //         tl.to(".left_txt_2a_mob ,.right_txt_2a_mob", {
-        //             opacity: 1,
-        //             duration: 0,
-        //         });
-        //     },
-        //     onUpdate: function () {
-        //         const progress = this.progress();
-        //         const half = 50 * progress;
-        //         const clip = `polygon(${50 - half}% ${50 - half}%, ${50 + half}% ${50 - half}%, ${50 + half}% ${50 + half}%, ${50 - half}% ${50 + half}% )`;
-        //         gsap.set(".hero_slide_1_mob", {
-        //             clipPath: clip,
-        //             transformOrigin: "center center",
-        //             willChange: "clip-path"
-        //         });
-        //     }
-        // }, "hello");
+        tl.to(".hero_slide_1_mob_img_mob", {
+            scale: 1,
+            ease: "linear",
+            transformOrigin: "center center",
+            willChange: "transform",
+            delay: .7,
+            duration: 1,
+            onComplete: function () {
+                tl.to(".left_txt_2a_mob ,.right_txt_2a_mob", {
+                    opacity: 0,
+                    duration: 0,
+                });
+            },
+            onReverseComplete: function () {
+                tl.to(".left_txt_2a_mob ,.right_txt_2a_mob", {
+                    opacity: 1,
+                    duration: 0,
+                });
+            },
+            onUpdate: function () {
+                const progress = this.progress();
+                const half = 50 * progress;
+                const clip = `polygon(${50 - half}% ${50 - half}%, ${50 + half}% ${50 - half}%, ${50 + half}% ${50 + half}%, ${50 - half}% ${50 + half}% )`;
+                gsap.set(".hero_slide_1_mob", {
+                    clipPath: clip,
+                    transformOrigin: "center center",
+                    willChange: "clip-path"
+                });
+            }
+        }, "hello");
 
-        // tl.to(".hero_slide_2_img_mob", {
-        //     scale: 1,
-        //     ease: "linear",
-        //     duration: .8,
-        //     transformOrigin: "center center",
-        //     willChange: "transform",
-        //     delay: 1.1,
-        //     onUpdate: function () {
-        //         const progress = this.progress();
-        //         const half = 50 * progress;
-        //         const clip = `polygon(${50 - half}% ${50 - half}%, ${50 + half}% ${50 - half}%, ${50 + half}% ${50 + half}%, ${50 - half}% ${50 + half}% )`;
-        //         gsap.set(".hero_slide_2_mob", {
-        //             clipPath: clip,
-        //             transformOrigin: "center center",
-        //             willChange: "clip-path"
-        //         });
-        //     }
-        // }, "hello")
+        tl.to(".hero_slide_2_img_mob", {
+            scale: 1,
+            ease: "linear",
+            duration: .8,
+            transformOrigin: "center center",
+            willChange: "transform",
+            delay: 1.1,
+            onUpdate: function () {
+                const progress = this.progress();
+                const half = 50 * progress;
+                const clip = `polygon(${50 - half}% ${50 - half}%, ${50 + half}% ${50 - half}%, ${50 + half}% ${50 + half}%, ${50 - half}% ${50 + half}% )`;
+                gsap.set(".hero_slide_2_mob", {
+                    clipPath: clip,
+                    transformOrigin: "center center",
+                    willChange: "clip-path"
+                });
+            }
+        }, "hello")
         tl.to(".hero_slide_4_mob", {
-            opacity: 1,
+            scale: 1,
             duration: .5,
             delay: 1.5,
             ease: "linear",
@@ -252,7 +252,7 @@ const MobileHero = () => {
 
                 <div className=" slide_paren_mob  w-[100%] h-[100%] center overflow-hidden absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-[#FFFDF6]"></div>
 
-                {/* <div
+                <div
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
                     }}
@@ -264,9 +264,9 @@ const MobileHero = () => {
 
                         className="hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3]"
                     />
-                </div> */}
+                </div>
 
-                {/* <div
+                <div
                     style={{
                         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
                     }}
@@ -278,8 +278,8 @@ const MobileHero = () => {
 
                         className=" hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] "
                     />
-                </div> */}
-                <div className=" hero_slide_4_mob overflow-hidden scale-[1] opacity-0 bg-[#FFFDF6] w-full h-full absolute z-[5]">
+                </div>
+                <div className=" hero_slide_4_mob overflow-hidden scale-[0]  bg-[#FFFDF6] w-full h-full absolute z-[5]">
                     <div className="w-full h-screen relative flex-col gap-10 center text-center ">
                         <div className=" about_div_mob flex-col w-full h-full gap-10 center text-center">
                             <p className=' text-xs lg:text-base font-black'>ABOUT US</p>
