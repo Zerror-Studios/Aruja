@@ -127,18 +127,33 @@ const index = () => {
 
     useEffect(() => {
 
-        gsap.to(".slide_ttx", {
+        if (window.innerWidth < 1024){
+            gsap.to(".slide_ttx", {
             width: "100%",
-            duration: 6,
+            // duration: 2,
             ease: "linear",
             scrollTrigger: {
                 trigger: ".slide_ttx",
                 start: "top 100%",
-                end: "bottom 50%",
-                scrub: true,
+                end: "top 50%",
+                scrub: .4,
                 // markers: true,
             }
         })
+        }else{
+            gsap.to(".slide_ttx", {
+                width: "100%",
+                duration: 6,
+                ease: "linear",
+                scrollTrigger: {
+                    trigger: ".slide_ttx",
+                    start: "top 100%",
+                    end: "bottom 50%",
+                    scrub: true,
+                    // markers: true,
+                }
+            })
+        }
 
         var tl = gsap.timeline({
             scrollTrigger: {

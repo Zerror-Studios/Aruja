@@ -103,7 +103,7 @@ const meta = {
         <div>
             <SeoHeader meta={meta} />
 
-            <div id='services' className=" serv_slider_paren w-full center  text-[#FFFDF6] h-[100dvh] lg:h-screen relative">
+            <div id='services' className=" serv_slider_paren overflow-hidden w-full center  text-[#FFFDF6] h-screen relative">
                 <img
                     className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/services/servImg4.webp" alt="loading" />
                 <img
@@ -113,7 +113,7 @@ const meta = {
                 <img
                     className=' serv_clip_div_back opacity-0 serv_slide_bg_img_4 w-full h-full absolute object-cover top-0 left-0 z-[1] ' src="/Images/services/servImg1.webp" alt="loading" />
 
-                <div className=" serv_slide_bg_img_1 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[15] p-8">
+                <div className=" serv_slide_bg_img_1 absolute w-[90%] lg:w-[80%] h-[70%]  lg:h-[80%] bg-[#454738] z-[15] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
                         <div className=" flex   justify-between">
                             <div className="flex gap-2  overflow-hidden uppercase text-xl lg:text-4xl">
@@ -142,7 +142,7 @@ const meta = {
                 </div>
 
 
-                <div className=" serv_slide_bg_img_2 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[14] p-8">
+                <div className=" serv_slide_bg_img_2 absolute w-[90%] lg:w-[80%] h-[70%]  lg:h-[80%] bg-[#454738] z-[14] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
                         <div className=" flex   justify-between">
                             <div className="flex gap-2 uppercase text-xl lg:text-4xl">
@@ -169,7 +169,7 @@ const meta = {
                 </div>
 
 
-                <div className="serv_slide_bg_img_3 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[13] p-8">
+                <div className="serv_slide_bg_img_3 absolute w-[90%] lg:w-[80%] h-[70%]  lg:h-[80%] bg-[#454738] z-[13] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
                         <div className=" flex   justify-between">
                             <div className="flex gap-2 uppercase text-xl lg:text-4xl">
@@ -196,7 +196,7 @@ const meta = {
                 </div>
 
 
-                <div className="serv_slide_bg_img_4 absolute w-[90%] lg:w-[80%] h-[80%] bg-[#454738] z-[12] p-8">
+                <div className="serv_slide_bg_img_4 absolute w-[90%] lg:w-[80%] h-[70%]  lg:h-[80%] bg-[#454738] z-[12] p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
                         <div className=" flex   justify-between">
                             <div className="flex gap-2 uppercase text-xl lg:text-4xl">
