@@ -187,12 +187,12 @@ const MobileHero = () => {
             ease: "linear",
             delay: 1,
         }, "parr");
-        // tl.to(".sq_img_4_mob", {
-        //     top: "-55vw",
-        //     duration: 1,
-        //     ease: "linear",
-        //     delay: 1.5,
-        // }, "parr");
+        tl.to(".sq_img_4_mob", {
+            top: "-55vw",
+            duration: 1,
+            ease: "linear",
+            delay: 1.5,
+        }, "parr");
         // tl.fromTo(".sq_img_in_3_mob", {
         //     y: -80,
         // }, {
@@ -348,14 +348,14 @@ const MobileHero = () => {
                             />
                         </div>
 
-                        {/* <div className="sq_img_4_mob aspect-square overflow-hidden absolute z-[1] bottom-[-40vw] lg:bottom-[-15vw] right-3 lg:right-10 w-[40vw] md:w-[15vw]">
+                        <div className="sq_img_4_mob aspect-square overflow-hidden absolute z-[1] bottom-[-40vw] lg:bottom-[-15vw] right-3 lg:right-10 w-[40vw] md:w-[15vw]">
                             <img
                                 src="/Images/HomePage/heroSlider/About_4_mob.webp"
                                 alt="loading"
 
                                 className="sq_img_in_4_mob  w-full h-full object-cover"
                             />
-                        </div> */}
+                        </div>
 
                         <div className=" hidden number_div_mob w-full absolute bottom-[-20vh] left-0 h-[20vh]    lg:grid space-y-5 md:space-y-0 content-center  grid-cols-1 md:flex md:items-center md:justify-between px-3 md:px-24">
                             <div className="text-start flex items-center justify-between  ">
