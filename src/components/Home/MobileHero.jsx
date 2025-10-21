@@ -55,7 +55,7 @@ const MobileHero = () => {
                 start: "top top",
                 end: "+600% top",
                 anticipatePin: 1,
-                scrub: true,
+                scrub: .4,
                 pin: true,
                 // markers: true,
             }
@@ -254,7 +254,7 @@ const MobileHero = () => {
 
                 <div
                     style={{
-                        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
+                        clipPath: "polygon(51% 51%, 51% 51%, 51% 51%, 51% 51%)",
                     }}
                     className="hero_slide_1_mob w-full h-full origin-center absolute z-[2]"
                 >
@@ -268,7 +268,7 @@ const MobileHero = () => {
 
                 <div
                     style={{
-                        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
+                        clipPath: "polygon(51% 51%, 51% 51%, 51% 51%, 51% 51%)",
                     }}
                     className="hero_slide_2_mob w-full h-full origin-center absolute z-[3]"
                 >
@@ -279,7 +279,7 @@ const MobileHero = () => {
                         className=" hero_slide_1_mob_img_mob h-full origin-center w-full object-cover scale-[0.3] "
                     />
                 </div>
-                <div className=" hero_slide_4_mob overflow-hidden scale-[0]  bg-[#FFFDF6] w-full h-full absolute z-[5]">
+                <div className=" hero_slide_4_mob overflow-hidden scale-[0.0001]  bg-[#FFFDF6] w-full h-full absolute z-[5]">
                     <div className="w-full h-screen relative flex-col gap-10 center text-center ">
                         <div className=" about_div_mob flex-col w-full h-full gap-10 center text-center">
                             <p className=' text-xs lg:text-base font-black'>ABOUT US</p>

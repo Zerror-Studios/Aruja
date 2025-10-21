@@ -37,7 +37,7 @@ const Hero = () => {
                 start: "top top",
                 end: "+=8000",
                 anticipatePin: 1,
-                scrub: true,
+                scrub: .4,
                 pin: true,
                 // markers: true,
             }
@@ -361,38 +361,38 @@ const Hero = () => {
 
                 <div
                     style={{
-                        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
+                        clipPath: "polygon(51% 51%, 51% 51%, 51% 51%, 51% 51%)"
                     }} className="hero_slide_1 w-full h-full origin-center  absolute z-[2] ">
                     <img
                         src="/Images/HomePage/heroSlider/Hero_animation_1.webp"
                         alt="loading"
 
-                        className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
+                        className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.35] "
                     />
                 </div>
                 <div
                     style={{
-                        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
+                        clipPath: "polygon(51% 51%, 51% 51%, 51% 51%, 51% 51%)"
                     }} className="hero_slide_2 w-full h-full origin-center  absolute z-[3] ">
                     <img
                         src="/Images/HomePage/heroSlider/Hero_animation_2.webp"
                         alt="loading"
 
-                        className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
+                        className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.35] "
                     />
                 </div>
                 <div
                     style={{
-                        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)"
+                        clipPath: "polygon(51% 51%, 51% 51%, 51% 51%, 51% 51%)"
                     }} className="hero_slide_3 w-full h-full origin-center  absolute z-[4] ">
                     <img
                         src="/Images/HomePage/heroSlider/Hero_animation_3.webp"
                         alt="loading"
 
-                        className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.3] "
+                        className=" hero_slide_1_img h-full origin-center w-full object-cover scale-[0.35] "
                     />
                 </div>
-                <div className=" hero_slide_4 overflow-hidden scale-[0] bg-[#FFFDF6] w-full h-full absolute z-[5]">
+                <div className=" hero_slide_4 overflow-hidden scale-[0.0001] bg-[#FFFDF6] w-full h-full absolute z-[5]">
                     <div className="w-full h-screen relative flex-col gap-10 center text-center ">
                         <div className=" about_div flex-col w-full h-full gap-10 center text-center">
                             <p className=' text-xs lg:text-base font-black'>ABOUT US</p>
