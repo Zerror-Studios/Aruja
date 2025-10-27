@@ -62,7 +62,7 @@ const index = () => {
                     <img className="w-full h-full object-cover" src="/Images/ContactPageImg.webp" alt="" />
                 </div>
                 <div className=" h-[60%] z-[1]   lg:h-full w-full lg:w-[75%] relative flex flex-col lg:flex-row items-end gap-y-5  pb-5 lg:gap-y-5 justify-end">
-                    <div className=" lg:hidden  marq_op opacity-0 mb-10 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full ">
+                    <div className=" md:hidden  marq_op opacity-0 mb-10 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full ">
                         <Marquee gradient gradientWidth={50} className='   h-full w-full scroller_none ' >
                             <p className='h-full  ml-[10vw] flex gap-10 items-center'>
                                 “Got a Thought? <img className='w-8' src="/monogram.svg" alt="" />
@@ -72,13 +72,13 @@ const index = () => {
                             </p>
                         </Marquee>
                     </div>
-                    <div className=" hidden lg:block absolute marq_op opacity-0 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full top-[10vh] lg:top-[25%]">
+                    <div className=" hidden md:block absolute marq_op opacity-0 text-5xl lg:text-[6vw] uppercase overflow-hidden scroller_none  w-full top-[10vh] lg:top-[25%]">
                         <Marquee gradient gradientWidth={50} className='   h-full w-full scroller_none ' >
                             <p className='h-full  ml-[5vw] flex gap-20 items-center'>
-                                “Got a Thought? <img className='w-20' src="/monogram.svg" alt="" />
+                                “Got a Thought? <img className=' md:w-12 lg:w-20' src="/monogram.svg" alt="" />
                             </p>
                             <p className='h-full  ml-[5vw] flex gap-20 items-center'>
-                                toss It Here”<img className='w-20' src="/monogram.svg" alt="" />
+                                toss It Here”<img className=' md:w-12 lg:w-20' src="/monogram.svg" alt="" />
                             </p>
 
                         </Marquee>
@@ -87,7 +87,7 @@ const index = () => {
                     <div className="w-full  lg:space-y-10 uppercase p-3 py-5 lg:p-28">
                         <div className="flex flex-col gap-y-5 lg:gap-y-0 lg:flex-row w-full justify-between">
                             <div className=" w-full flex  lg:flex-col justify-start leading-none lg:w-1/2">
-                                <div  className=' w-[35%] md:w-fit  block overflow-hidden   '>
+                                <div  className=' w-[35%] lg:w-fit  block overflow-hidden   '>
                                     <p className='ctct_anim_txt mt-1 lg:mt-0 mb-1 text-xs lg:text-sm font-black translate-y-[105%]'  >
                                         Request a Quote
                                     </p>
