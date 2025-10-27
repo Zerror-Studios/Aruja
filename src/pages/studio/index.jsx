@@ -620,8 +620,8 @@ const index = () => {
         <>
             <SeoHeader meta={meta} />
             <div className="w-full relative  pt-14 lg:pt-12 flex-col center">
-                <div className="w-full z-[99]  translate-y-[7vw] lg:translate-y-[4.1vw]  center block overflow-hidden">
-                    <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-0    flex center gap-2 lg:gap-6  uppercase text-[16vw] lg:text-[15vw]">
+                <div className="w-full z-[99]  translate-y-[7vw] lg:translate-y-[2.5vw]  center block overflow-hidden">
+                    <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-0    flex center gap-2 lg:gap-6  uppercase text-[16vw] lg:text-[14vw]">
                         <p className=" anim_txt translate-y-[100%]   ">The</p>
                         <h2 className=" anim_txt translate-y-[100%] italic   ">studio</h2>
                     </div>
@@ -793,7 +793,7 @@ const index = () => {
 
 
                 <div className=" solution_paren w-full h-screen bg-[#454738] text-[#FFFDF6] ">
-                    <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-24 text-3xl lg:text-6xl gap-4">
+                    <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-24 md:py-32 text-3xl lg:text-6xl gap-4">
                         <p>Our</p>
                         <h2 className='italic '>solution</h2>
                     </div>

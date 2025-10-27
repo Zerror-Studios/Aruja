@@ -5,7 +5,10 @@ import CustomEase from 'gsap/dist/CustomEase'
 import { useRouter } from "next/router";
 import { RiCloseLine, RiMenu3Line, RiMenuLine } from '@remixicon/react';
 import useNavigation from '@/store/useNavigation';
-gsap.registerPlugin(CustomEase);
+import { usePageReady } from '../hooks/usePageReady';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(CustomEase ,ScrollTrigger );
 
 
 const Header = () => {
@@ -27,7 +30,7 @@ const Header = () => {
     if (window.lenis) lenis.stop();
     gsap.to(".open_menu", {
       right: 0,
-      duration: 1,
+      duration: .8,
       ease: "in-out-quint",
       onComplete: () => {
         gsap.set(".header", { pointerEvents: "none" });
@@ -58,6 +61,18 @@ const Header = () => {
     });
   }
 
+  usePageReady(()=>{
+    gsap.to(".header",{
+      backgroundColor:"#fffdf6",
+      scrollTrigger:{
+          trigger:".trig_div",
+          start:"bottom top",
+          end:"+=100%",
+          // markers:true,
+          scrub:true
+      }
+    })
+  })
 
   return (
     <>
@@ -117,7 +132,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-
+          <div className="trig_div absolute h-screen w-full pointer-events-none"></div>
       <div className={` header  ${(currentPath === "/services" || currentPath === "/studio" || currentPath === "/work" || currentPath === "/contact") ? "flex" : "hidden"}  w-full  p-3 lg:p-5 lg:px-10 z-[999999] items-center justify-between fixed top-0 left-0`}>
         <div className="">
           <a
@@ -125,7 +140,7 @@ const Header = () => {
             className='relative block center  group'
             onClick={() => navigate(router, "/")}
           >
-            <img className=' group-hover:opacity-0  transition-all duration-300 w-[13vw] cursor-pointer lg:w-[5vw]' src="/logo.png" alt="loading" />
+            <img className=' group-hover:opacity-0  transition-all duration-300 w-[13vw] cursor-pointer md:w-[8vw] lg:w-[5vw]' src="/logo.png" alt="loading" />
             <img className=' opacity-0  group-hover:opacity-100 absolute top-0 left-0 transition-all duration-300 translate-x-4 w-[121vw] cursor-pointer lg:w-[3vw]' src="/monogram.svg" alt="loading" />
           </a>
         </div>

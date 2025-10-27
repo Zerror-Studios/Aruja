@@ -37,18 +37,20 @@ const index = () => {
     const work = worksData.find((item) => item.id === parseInt(id));
 
     usePageReady(() => {
-        gsap.to(".paex_img", {
-            y: 500,
-            duration: 4,
-            ease: "linear",
-            scrollTrigger: {
-                trigger: ".stic_image_pent",
-                start: "top top",
-                end: "bottom top",
-                scrub: true,
-                // markers: true,
-            }
-        })
+        if (window.innerWidth >= 1024) {
+            gsap.to(".paex_img", {
+                y: 500,
+                duration: 4,
+                ease: "linear",
+                scrollTrigger: {
+                    trigger: ".stic_image_pent",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                    // markers: true,
+                }
+            })
+        }
         gsap.fromTo(".id_anim_txt_2", {
             clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
         }, {

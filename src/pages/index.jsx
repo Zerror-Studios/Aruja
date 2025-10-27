@@ -15,10 +15,10 @@ const Home = ({ meta }) => {
     <>
       <SeoHeader meta={meta} />
       <IntroLoader />
-      <div className="lg:hidden w-full">
+      <div className="md:hidden w-full">
         <MobileHero />
       </div>
-      <div className="hidden lg:block w-full">
+      <div className="hidden md:block w-full">
         <Hero />
       </div>
       {/* <div className="lg:hidden w-full">

@@ -417,8 +417,9 @@ const Hero = () => {
                                     <h2> <i>and precision.</i> </h2>
                                 </div>
                             </div>
+                            <a href="/studio" target="_blank" >
                             <button
-                                onClick={() => navigate(router, "/studio")}
+                                // onClick={() => navigate(router, "/studio")}
                             >
                                 <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
                                     <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
@@ -432,6 +433,7 @@ const Hero = () => {
                                     </div>
                                 </div>
                             </button>
+                            </a>
                         </div>
 
                         <div className="sq_img_1 aspect-square overflow-hidden absolute z-[1] bottom-[-50vw] lg:bottom-[-15vw] right-3 lg:right-10 w-[50vw] md:w-[15vw]">

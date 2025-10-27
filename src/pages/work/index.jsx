@@ -205,15 +205,15 @@ const Index = () => {
       <SeoHeader meta={meta} />
       <div
         className="w-full pt-14 lg:pt-12  relative   flex-col justify-between">
-        <div className="w-full  lg:flex px-3 mb-5 lg:mb-0 justify-center translate-y-[7vw] lg:translate-y-[4.1vw] overflow-hidden">
-          <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[17vw] lg:text-[15vw] ">
+        <div className="w-full  lg:flex px-3 mb-5 lg:mb-0 justify-center translate-y-[7vw] lg:translate-y-[2.5vw] overflow-hidden">
+          <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[17vw] lg:text-[14vw] ">
             <p className="wrk_anim_txt translate-y-[105%] ">our</p>
             <h2 className="wrk_anim_txt translate-y-[105%]  italic">work</h2>
           </div>
         </div>
 
         <div className="w-full relative   lg:flex items-center justify-center ">
-          <div className=" text-base px-3  absolute  top-[8.5vw] lg:top-[4.1vw] z-[99] lg:w-fit">
+          <div className=" text-base px-3  absolute  top-[8.5vw] lg:top-[3vw] z-[99] lg:w-fit">
             <div className=" w-full lg:hidden leading-none font-semibold">
               <div className="block overflow-hidden">
                 <p className='wrk_anim_txt translate-y-[105%]'   >Every project at arujaK is crafted with flow, proportion, and precision. </p>

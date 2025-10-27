@@ -304,21 +304,24 @@ const MobileHero = () => {
                                     <h2> <i>and precision.</i> </h2>
                                 </div>
                             </div>
-                            <button
-                                onClick={() => navigate(router, "/studio")}
-                            >
-                                <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
-                                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                                    <p className=' text-sm lg:text-base '>
-                                        View more
-                                    </p>
-                                    <div className="block relative">
-                                        <img className='  w-[70%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
-                                        <img className='  w-[70%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
-                                        <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
+                            <a href="/studio" target="_blank" >
+                                <button
+                                // onClick={() => navigate(router, "/studio")}
+                                >
+                                    <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
+                                        <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                                        <p className=' text-sm lg:text-base '>
+                                            View more
+                                        </p>
+                                        <div className="block relative">
+                                            <img className='  w-[70%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
+                                            <img className='  w-[70%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
+                                            <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
+                                        </div>
                                     </div>
-                                </div>
-                            </button>
+                                </button>
+
+                            </a>
                         </div>
 
                         <div className="sq_img_1_mob aspect-square overflow-hidden absolute z-[1] bottom-[-40vw] lg:bottom-[-15vw] right-3 lg:right-10 w-[40vw] md:w-[15vw]">
