@@ -205,26 +205,26 @@ const Index = () => {
       <SeoHeader meta={meta} />
       <div
         className="w-full pt-14 lg:pt-12  relative   flex-col justify-between">
-        <div className="w-full  lg:flex px-3 mb-5 lg:mb-0 justify-center translate-y-[7vw] lg:translate-y-[2.5vw] overflow-hidden">
-          <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[17vw] lg:text-[14vw] ">
+        <div className="w-full  md:flex px-3 mb-5 lg:mb-0 justify-center translate-y-[7vw] md:translate-y-[2.5vw] overflow-hidden">
+          <div className="leading-none overflow-hidden flex gap-2 uppercase   pr-4 lg:pr-12 text-[17vw] md:text-6xl lg:text-[14vw] ">
             <p className="wrk_anim_txt translate-y-[105%] ">our</p>
             <h2 className="wrk_anim_txt translate-y-[105%]  italic">work</h2>
           </div>
         </div>
 
-        <div className="w-full relative   lg:flex items-center justify-center ">
-          <div className=" text-base px-3  absolute  top-[8.5vw] lg:top-[3vw] z-[99] lg:w-fit">
-            <div className=" w-full lg:hidden leading-none font-semibold">
+        <div className="w-full relative   md:flex items-center justify-center ">
+          <div className=" text-base px-3  absolute  top-[8.5vw] md:top-[3vw] z-[99] md:w-fit">
+            <div className=" w-full md:hidden leading-none font-semibold">
               <div className="block overflow-hidden">
-                <p className='wrk_anim_txt translate-y-[105%]'   >Every project at arujaK is crafted with flow, proportion, and precision. </p>
+                <p className='wrk_anim_txt translate-y-[105%] md:w-[60%]'   >Every project at Studio Akto is crafted with flow, proportion, and precision. </p>
               </div>
               <div className="block  mt-1 overflow-hidden">
                 <p className='wrk_anim_txt translate-y-[105%]'   >Explore some of our featured spaces:</p>
               </div>
             </div>
-            <div className=" hidden lg:block leading-none font-semibold">
+            <div className=" hidden md:block leading-none font-semibold">
               <div className="block overflow-hidden">
-                <p className='wrk_anim_txt translate-y-[105%]'   >Every project at arujaK is crafted with</p>
+                <p className='wrk_anim_txt translate-y-[105%]'   >Every project at Studio Akto is crafted with</p>
               </div>
               <div className="block overflow-hidden">
                 <p className='wrk_anim_txt translate-y-[105%]'   >flow, proportion, and precision. </p>
@@ -272,7 +272,7 @@ const Index = () => {
                 <div
                   key={idx}
                   onClick={() => navigate(router, `/work/${item.id}`)}
-                  className="shrink-0 cursor-pointer w-[80vw] md:w-[23.25vw] lg:w-[22.8vw] h-full">
+                  className="shrink-0 cursor-pointer w-[80vw] md:w-[45vw] lg:w-[22.8vw] h-full">
                   <div className="text-base  font-semibold block overflow-hidden mb-2 uppercase">
                     <p className='wrk_anim_txt hori_wrk_anim_txt_title translate-y-[105%] '>
                       {item.title}
@@ -295,7 +295,7 @@ const Index = () => {
 
         <div
           ref={verticalRef}
-          className={`w-full mt-44 mb-10 lg:mb-24 px-3 lg:px-10 grid gap-y-5 lg:gap-y-14 gap-x-3 lg:gap-x-5 grid-cols-1 md:grid-cols-2`}
+          className={`w-full mt-44 mb-10 lg:mb-24 px-3 lg:px-10 grid gap-y-10 lg:gap-y-14 gap-x-3 lg:gap-x-5 grid-cols-1 md:grid-cols-2`}
           style={{ opacity: 1, display: "grid" }}
         >
           {worksData.map((item, idx) => (

@@ -200,7 +200,7 @@ export const worksData = [
             "Hand-drawn visuals bringing warmth and individuality to design.",
             "Detailed sketches translate complex spaces into accessible drawings.",
             "Layered checklists ensured accuracy across all illustrations.",
-            "Became a signature element of Arujak’s bespoke design process.",
+            "Became a signature element of Studio Akto’s bespoke design process.",
         ],
         HeroImg: "/Images/projects/illustrations/heroImg.webp",
         images: [

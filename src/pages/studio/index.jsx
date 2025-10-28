@@ -127,20 +127,20 @@ const index = () => {
 
     useEffect(() => {
 
-        if (window.innerWidth < 1024){
+        if (window.innerWidth < 1024) {
             gsap.to(".slide_ttx", {
-            width: "100%",
-            // duration: 2,
-            ease: "linear",
-            scrollTrigger: {
-                trigger: ".slide_ttx",
-                start: "top 100%",
-                end: "top 50%",
-                scrub: .4,
-                // markers: true,
-            }
-        })
-        }else{
+                width: "100%",
+                // duration: 2,
+                ease: "linear",
+                scrollTrigger: {
+                    trigger: ".slide_ttx",
+                    start: "top 100%",
+                    end: "top 50%",
+                    scrub: .4,
+                    // markers: true,
+                }
+            })
+        } else {
             gsap.to(".slide_ttx", {
                 width: "100%",
                 duration: 6,
@@ -186,7 +186,7 @@ const index = () => {
         }, "parr");
 
 
-        if(window.innerWidth < 1024) return;
+        if (window.innerWidth < 1024) return;
 
         gsap.fromTo(".parlx_img_eff", {
             y: -100,
@@ -241,7 +241,7 @@ const index = () => {
         });
 
 
-        
+
 
     }, [])
 
@@ -620,8 +620,8 @@ const index = () => {
         <>
             <SeoHeader meta={meta} />
             <div className="w-full relative  pt-14 lg:pt-12 flex-col center">
-                <div className="w-full z-[99]  translate-y-[7vw] lg:translate-y-[2.5vw]  center block overflow-hidden">
-                    <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-0    flex center gap-2 lg:gap-6  uppercase text-[16vw] lg:text-[14vw]">
+                <div className="w-full z-[99]  translate-y-[7vw] md:translate-y-[2.5vw]  center block overflow-hidden">
+                    <div className="leading-none  overflow-hidden  pr-2 lg:pr-4 lg:translate-x-4 translate-x-0    flex center gap-2 lg:gap-6  uppercase text-[16vw] md:text-6xl lg:text-[14vw]">
                         <p className=" anim_txt translate-y-[100%]   ">The</p>
                         <h2 className=" anim_txt translate-y-[100%] italic   ">studio</h2>
                     </div>
@@ -673,20 +673,20 @@ const index = () => {
                             <img className='  parlx_img_eff scale-[2.5] lg:scale-110 w-full h-full object-cover  brightness-[.9] ' src="/Images/studioPage/right_portrait.webp" alt="loading" />
                         </div>
                         <div className="w-1/2  aspect-[10/14] pl-2 h-full flex items-end">
-                            <p className=' text-xs md:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
+                            <p className=' text-xs md:text-lg mt-10 leading-tight'>At Studio Akto, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
                         </div>
                     </div>
                     <div className=" hidden md:block w-[23.5%] h-full ">
                         <div className="w-full flex par_img_pren overflow-hidden items-end aspect-[10/16] ">
                             <img className=' parlx_img_eff scale-[150] lg:scale-110 w-full aspect-[4/5] object-cover  brightness-[.9] ' src="/Images/studioPage/right_portrait.webp" alt="loading" />
                         </div>
-                        <p className=' text-sm lg:text-lg mt-10 leading-tight'>At arujaK, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
+                        <p className=' text-sm lg:text-lg mt-10 leading-tight'>At Studio Akto, we combine creativity with operations. We believe great interiors must inspire while staying on track. With 15+ projects across India and 45,000+ sq. ft. designed, we bring structure and imagination together.</p>
                     </div>
                 </div>
 
                 <div className="w-full py-20 lg:py-44 px-3 lg:px-10 gap-5 lg:gap-20 flex flex-col lg:flex-row justify-between items-stretch">
                     <div className=" w-full lg:w-[70vw] flex flex-col justify-between">
-                        <div className="mt-3 lg:mt-5 overflow-hidden uppercase leading-none text-[9vw] md:text-8xl">
+                        <div className="mt-3 lg:mt-5 overflow-hidden uppercase leading-none text-[9vw] lg:text-8xl">
                             <div className=" slide_ttx flex w-[90%] justify-between">
                                 <p>the</p>
                                 <p>person</p>
@@ -714,7 +714,7 @@ const index = () => {
                                     “ Personal vision, professional execution.
                                 </p>
                                 <p>
-                                    Founded with the intent to balance aesthetics with function, arujaK
+                                    Founded with the intent to balance aesthetics with function, Studio Akto
                                     reflects the eye and passion of its founder. Each project carries
                                     personal attention — not just a template.”
                                 </p>
@@ -736,7 +736,7 @@ const index = () => {
                         <div className="leading-tight lg:hidden  mt-3 w-full capitalize">
                             <p className='text-sm leading-tight md:text-lg lg:text-3xl'>
                                 “ Personal vision, professional execution.
-                                Founded with the intent to balance aesthetics with function, arujaK
+                                Founded with the intent to balance aesthetics with function, Studio Akto
                                 reflects the eye and passion of its founder. Each project carries
                                 personal attention — not just a template.”
                             </p>
@@ -793,7 +793,7 @@ const index = () => {
 
 
                 <div className=" solution_paren w-full h-screen bg-[#454738] text-[#FFFDF6] ">
-                    <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-24 md:py-32 text-3xl lg:text-6xl gap-4">
+                    <div className="flex uppercase h-[25%]  px-3 lg:px-10 py-24 md:py-[6vw] text-3xl lg:text-6xl gap-4">
                         <p>Our</p>
                         <h2 className='italic '>solution</h2>
                     </div>

@@ -7,15 +7,16 @@ import { RiCloseLine, RiMenu3Line, RiMenuLine } from '@remixicon/react';
 import useNavigation from '@/store/useNavigation';
 import { usePageReady } from '../hooks/usePageReady';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import useHeadroom from '../hooks/useHeadroom';
 
-gsap.registerPlugin(CustomEase ,ScrollTrigger );
+gsap.registerPlugin(CustomEase, ScrollTrigger);
 
 
 const Header = () => {
   CustomEase.create("in-out-quint", "0.83,0,0.17,1");
   const router = useRouter();
   const currentPath = router.pathname;
-
+const { isVisible, isAtTop } = useHeadroom(100);
   const { navigate } = useNavigation();
 
   useEffect(() => {
@@ -60,19 +61,6 @@ const Header = () => {
       }
     });
   }
-
-  usePageReady(()=>{
-    gsap.to(".header",{
-      backgroundColor:"#fffdf6",
-      scrollTrigger:{
-          trigger:".trig_div",
-          start:"bottom top",
-          end:"+=100%",
-          // markers:true,
-          scrub:true
-      }
-    })
-  })
 
   return (
     <>
@@ -132,16 +120,28 @@ const Header = () => {
           </div>
         </div>
       </div>
-          <div className="trig_div absolute h-screen w-full pointer-events-none"></div>
-      <div className={` header  ${(currentPath === "/services" || currentPath === "/studio" || currentPath === "/work" || currentPath === "/contact") ? "flex" : "hidden"}  w-full  p-3 lg:p-5 lg:px-10 z-[999999] items-center justify-between fixed top-0 left-0`}>
+      <div className="trig_div absolute h-screen w-full pointer-events-none"></div>
+      <div
+        className={`header ${currentPath === "/services" ||
+            currentPath === "/studio" ||
+            currentPath === "/work" ||
+            currentPath === "/contact"
+            ? "flex"
+            : "hidden"
+          } w-full p-3 lg:p-4 lg:px-10 items-center justify-between z-[9999] fixed top-0 
+  transition-all duration-500 
+  ${isVisible ? "translate-y-0" : "-translate-y-full"}
+  ${isAtTop ? "bg-transparent" : "bg-[#fffdf6] "}
+  `}
+      >
         <div className="">
           <a
             href="/"
             className='relative block center  group'
             onClick={() => navigate(router, "/")}
           >
-            <img className=' group-hover:opacity-0  transition-all duration-300 w-[13vw] cursor-pointer md:w-[8vw] lg:w-[5vw]' src="/logo.png" alt="loading" />
-            <img className=' opacity-0  group-hover:opacity-100 absolute top-0 left-0 transition-all duration-300 translate-x-4 w-[121vw] cursor-pointer lg:w-[3vw]' src="/monogram.svg" alt="loading" />
+            <img className=' group-hover:opacity-0  transition-all duration-300 w-[12vw] cursor-pointer md:w-[7vw] lg:w-[4vw]' src="/logo.png" alt="loading" />
+            <img className=' opacity-0  group-hover:opacity-100 absolute top-0 left-0 transition-all duration-300 translate-x-3 w-[121vw] cursor-pointer lg:w-[2.5vw]' src="/monogram.svg" alt="loading" />
           </a>
         </div>
         <div className="flex items-center gap-10  h-full">

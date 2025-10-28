@@ -286,7 +286,7 @@ const NewHero = () => {
                                 <div className='block relative overflow-hidden pb-2'>
                                     <div className=" opa_slide_1 absolute top-1 left-[25%] w-full h-full bg-[#fffdf6c0]"></div>
                                     <p>
-                                        At arujaK, design is more than decoration
+                                        At Studio Akto, design is more than decoration
                                     </p>
                                 </div>
                                 <div className="flex  relative overflow-hidden pb-2 gap-2">

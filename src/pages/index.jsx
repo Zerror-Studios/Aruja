@@ -25,10 +25,10 @@ const Home = ({ meta }) => {
         <VideoSwiper />
       </div> */}
       {/* <div className="hidden lg:block w-full"> */}
-        <VideoSection />
+      <VideoSection />
       {/* </div> */}
       <StickyWork />
-      <ServiceSlider/>
+      <ServiceSlider />
       <ReviewSection />
     </>
   );
@@ -39,17 +39,17 @@ export default Home;
 export async function getStaticProps() {
   const meta = {
     title: "STUDIO AKTO — INTERIOR DESIGN STUDIO",
-    description: "ArujaK is a multidisciplinary interior design studio blending creativity with precision, crafting functional and inspiring spaces",
+    description: "Studio Akto is a multidisciplinary interior design studio blending creativity with precision, crafting functional and inspiring spaces",
     canonical: "https://studioakto.com/",
     og: {
       title: "STUDIO AKTO — INTERIOR DESIGN STUDIO",
-      description: "ArujaK is a multidisciplinary interior design studio blending creativity with precision, crafting functional and inspiring spaces",
+      description: "Studio Akto is a multidisciplinary interior design studio blending creativity with precision, crafting functional and inspiring spaces",
       image: "https://www.studioakto.com/logo.png"
     },
     twitter: {
       card: "summary_large_image",
       title: "STUDIO AKTO — INTERIOR DESIGN STUDIO",
-      description: "ArujaK is a multidisciplinary interior design studio blending creativity with precision, crafting functional and inspiring spaces",
+      description: "Studio Akto is a multidisciplinary interior design studio blending creativity with precision, crafting functional and inspiring spaces",
       image: "https://www.studioakto.com/logo.png"
     },
     robots: "index,follow"
