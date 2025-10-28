@@ -17,7 +17,7 @@ export default function useHeadroom(threshold = 100) {
     }
 
     // Update top state
-    setIsAtTop(currentY <= 10);
+    setIsAtTop(currentY <= 500);
 
     setLastScrollY(currentY);
   }, [lastScrollY, threshold]);

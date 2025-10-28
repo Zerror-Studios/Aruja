@@ -64,6 +64,19 @@ const { isVisible, isAtTop } = useHeadroom(100);
 
   return (
     <>
+
+      {/* /logo/ */}
+      <div className="fixed top-0 p-3 lg:p-4 lg:px-10 z-[99999]">
+          <a
+            href="/"
+            className='relative block center  group'
+            onClick={() => navigate(router, "/")}
+          >
+            <img className=' group-hover:opacity-0  transition-all duration-300 w-[12vw] cursor-pointer md:w-[7vw] lg:w-[4vw]' src="/logo.png" alt="loading" />
+            <img className=' opacity-0  group-hover:opacity-100 absolute top-0 left-0 transition-all duration-300 translate-x-3 w-[121vw] cursor-pointer lg:w-[2.5vw]' src="/monogram.svg" alt="loading" />
+          </a>
+        </div>
+
       <div
         className=" open_menu right-[-100%] w-full h-[100dvh] bg-[#FFFDF6] text-[#2E2D2B] p-5 fixed z-[9999999]">
         <div className=" absolute  right-5 w-full flex justify-end">
@@ -134,7 +147,7 @@ const { isVisible, isAtTop } = useHeadroom(100);
   ${isAtTop ? "bg-transparent" : "bg-[#fffdf6] "}
   `}
       >
-        <div className="">
+        <div className="opacity-0">
           <a
             href="/"
             className='relative block center  group'
