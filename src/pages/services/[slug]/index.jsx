@@ -12,16 +12,31 @@ import Image from 'next/image';
 import { Autoplay } from 'swiper/modules';
 import { ServicesData } from '@/store/ServicesData';
 gsap.registerPlugin(ScrollTrigger);
-const data = [
-    {
-        heroImg: "/Images/services/servImg3.webp",
-        title: "Resedential interior"
-    }
-]
+
 
 const ServiceDetail = () => {
+
+
     const router = useRouter();
     const service = ServicesData.find(item => item.slug === router?.query?.slug);
+
+    const meta = {
+        title: service?.seo?.title || "",
+        description: service?.seo?.desc || "",
+        canonical: "https://studioakto.com/services",
+        og: {
+            title: service?.seo?.title || "",
+            description: service?.seo?.desc || "",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: service?.seo?.title || "",
+            description: service?.seo?.desc || "",
+            image: "https://www.studioakto.com/logo.png"
+        },
+        robots: "index,follow"
+    };
 
     usePageReady(() => {
         if (window.innerWidth >= 1024) {
@@ -108,13 +123,14 @@ const ServiceDetail = () => {
             duration: 500,
             easing: "ease-secondary",
         });
-    }, []);
+    }, [service]);
 
     useEffect(() => {
         AOS.refresh();
-    });
+    }, [service]);
     return (
-        <>
+        <div>
+            <SeoHeader meta={meta} />
             <div className="  w-full h-[100vh] lg:h-[120vh] relative text-[#FFFDF4] ">
                 <div className=" stic_image_pent   w-full h-full overflow-hidden relative center">
                     <img
@@ -244,7 +260,7 @@ const ServiceDetail = () => {
                 </div>
             </div>
 
-        </>
+        </div>
     )
 }
 

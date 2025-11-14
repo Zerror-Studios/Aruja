@@ -37,6 +37,10 @@ export const ServicesData = [
       title: "Book Your Design Consultation Today",
       para: "Let’s make your dream home a reality. Get in touch with our expert residential interior designers in Delhi NCR, Faridabad, Gurgaon, and South Delhi for a consultation today. Experience the perfect blend of creativity, craftsmanship, and luxury design.",
     },
+    seo:{
+      title:"Residential Interior Design Services in Delhi NCR | Studio Akto",
+      desc:"Transform your home with elegant, functional interiors crafted by expert designers. Book your residential interior design consultation in Delhi NCR today."
+    },
     number: "01",
     heroDesc: "Personalized home transformations that balance aesthetics and function, creating warm, timeless spaces tailored to everyday living.",
     heroImg: "/Images/services/servImg4.webp",
@@ -79,6 +83,10 @@ export const ServicesData = [
     contact: {
       title: "Transform Your Business Space Today",
       para: "Elevate your brand presence with bespoke commercial interior design services in Delhi NCR, Gurgaon, Faridabad, and South Delhi. Contact our expert design team today to discuss your project and create a professional environment that inspires success.",
+    },
+    seo:{
+      title:"Commercial Interior Design Services in Delhi NCR | Studio Akto",
+      desc:"Transform your commercial space with stunning interiors crafted by expert designers. Book your commercial interior design consultation in Delhi NCR today."
     },
     number: "02",
     heroDesc: "Transformative redesign of workspaces that enhance functionality, reflect brand identity, and create engaging professional environments.",
@@ -123,6 +131,10 @@ export const ServicesData = [
       title: "Book Your Space Planning Consultation Today",
       para: "Ready to reimagine your space? Connect with our space planning experts in Delhi NCR, Gurgaon, and South Delhi today. Let’s create a layout that maximizes potential, enhances comfort, and brings your vision to life.",
     },
+    seo:{
+      title:"Space Planning Services in Delhi NCR | Smart Layout Design",
+      desc:"Optimize your home or office layout with expert space planning. Create functional, beautiful interiors with our design specialists in Delhi NCR."
+    },
     number: "03",
     heroDesc: "Comprehensive planning of form and flow to create efficient, balanced, and experience-driven living or working spaces.",
     heroImg: "/Images/services/servImg3.webp",
@@ -165,6 +177,10 @@ export const ServicesData = [
     contact: {
       title: "Book Your Styling Consultation Today",
       para: "Ready to give your interiors the perfect finishing touch? Connect with our interior stylists in Delhi NCR, Gurgaon, and South Delhi to schedule your consultation. Let’s bring depth, charm, and individuality to your space through thoughtful styling.",
+    },
+    seo:{
+      title:"Interior Styling Services in Delhi NCR | Home & Office Styling",
+      desc:" Add personality and charm to your interiors with professional styling. Connect with our interior stylists in Delhi NCR for a curated design experience."
     },
     number: "04",
     heroDesc: "Thoughtful selection of materials and decor that refine spaces with balance, texture, and timeless visual appeal.",
