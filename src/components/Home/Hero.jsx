@@ -418,21 +418,21 @@ const Hero = () => {
                                 </div>
                             </div>
                             <a href="/studio" target="_blank" >
-                            <button
+                                <button
                                 // onClick={() => navigate(router, "/studio")}
-                            >
-                                <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
-                                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                                    <p className=' text-xs lg:text-base '>
-                                        View more
-                                    </p>
-                                    <div className="block relative">
-                                        <img className='  w-[70%] lg:w-full   opacity-0  ' src="/icons/black_arrow.png" alt="loading" />
-                                        <img className='  w-[70%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/black_arrow.png" alt="loading" />
-                                        <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/black_arrow.png" alt="loading" />
+                                >
+                                    <div className=' mt-5 relative w-fit group overflow-hidden uppercase text-sm flex items-center lg:gap-2'>
+                                        <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                                        <p className=' text-xs lg:text-base '>
+                                            View more
+                                        </p>
+                                        <div className="block relative">
+                                            <img className='  w-[70%] lg:w-full   opacity-0  ' src="/icons/arrow_tilted.svg" alt="loading" />
+                                            <img className='  w-[70%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/arrow_tilted.svg" alt="loading" />
+                                            <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/arrow_tilted.svg" alt="loading" />
+                                        </div>
                                     </div>
-                                </div>
-                            </button>
+                                </button>
                             </a>
                         </div>
 

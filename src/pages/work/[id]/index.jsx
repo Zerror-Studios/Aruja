@@ -121,7 +121,7 @@ const index = () => {
         <>
             <SeoHeader meta={meta} />
 
-            <div className="  w-full h-[100vh] lg:h-[170vh] relative text-[#FFFDF4] ">
+            <div className="  w-full h-[120vh] lg:h-[170vh] relative text-[#FFFDF4] ">
                 <div className=" stic_image_pent   w-full h-full overflow-hidden relative center">
                     <img
                         src={work?.HeroImg}

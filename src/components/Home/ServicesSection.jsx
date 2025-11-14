@@ -5,32 +5,9 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { usePageReady } from '@/components/hooks/usePageReady';
 import SeoHeader from '@/components/seo/SeoHeader';
 import Link from 'next/link';
-import useNavigation from '@/store/useNavigation';
-import { useRouter } from 'next/router';
-
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 
-const ServiceSlider = () => {
-    const router = useRouter();
-    const { navigate } = useNavigation();
-    const meta = {
-        title: "STUDIO AKTO — SERVICES",
-        description: "Discover Studio AKTO’s interior design services, creating functional, proportion-led spaces for residential, commercial, and hospitality projects.",
-        canonical: "https://studioakto.com/services",
-        og: {
-            title: "STUDIO AKTO — SERVICES",
-            description: "We craft tailored interior solutions across homes, offices, and hospitality, balancing form, function, and flow.",
-            image: "https://www.studioakto.com/logo.png" // Replace with a hero image from your services page if available
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: "STUDIO AKTO — SERVICES",
-            description: "Explore our range of interior design services that transform spaces with proportion, purpose, and precision.",
-            image: "https://www.studioakto.com/logo.png" // Optional: replace with a hero image
-        },
-        robots: "index,follow"
-    };
-
+const ServicesSection = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -106,9 +83,7 @@ const ServiceSlider = () => {
 
     return (
         <div>
-            <SeoHeader meta={meta} />
-
-            <div id='services' className=" serv_slider_paren overflow-hidden w-full center  text-[#FFFDF6] h-screen relative">
+    <div id='services' className=" serv_slider_paren overflow-hidden w-full center  text-[#FFFDF6] h-screen relative">
                 <img
                     className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/services/servImg4.webp" alt="loading" />
                 <img
@@ -132,14 +107,14 @@ const ServiceSlider = () => {
                         </div>
                         <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
                             <div className="block overflow-hidden ">
-                                <div onClick={() => navigate(router, "/services/residential-interior")}>
-                                    <div className=' relative group cursor-pointer flex items-center gap-5 leading-none text-3xl lg:text-5xl uppercase'>
+                                <Link href="/services/residential-interior">
+                                    <div className=' relative group flex items-center gap-5 leading-none text-3xl lg:text-5xl uppercase'>
                                         <div className=" absolute bottom-0 rounded-full w-0 group-hover:w-full transition-all duration-300 h-[1px] bg-[#FFFDF6]"></div>
                                         <p>
                                             Residential Interior
                                         </p>
                                         <img className=' w-[4vw]  md:w-[1.5vw] translate-y-0.5 invert-100' src="/icons/arrow_tilted.svg" alt="" /></div>
-                                </div>
+                                </Link>
                             </div>
                             <div className=" overflow-hidden w-full text-sm lg:text-base lg:w-[30%] leading-none">
                                 <p className='serv_anim_txt translate-y-[105%]'>Personalized home transformations that balance aesthetics and function, creating warm, timeless spaces tailored to everyday living.</p>
@@ -167,14 +142,14 @@ const ServiceSlider = () => {
                             </div>
                         </div>
                         <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
-                            <div onClick={() => navigate(router, "/services/commercial-interiors")}>
-                                <div className=' relative group cursor-pointer flex items-center gap-5 leading-none text-3xl lg:text-5xl uppercase'>
+                            <Link href="/services/commercial-interiors">
+                                <div className=' relative group flex items-center gap-5 leading-none text-3xl lg:text-5xl uppercase'>
                                     <div className=" absolute bottom-0 rounded-full w-0 group-hover:w-full transition-all duration-300 h-[1px] bg-[#FFFDF6]"></div>
                                     <p>
                                         commercial interiors
                                     </p>
                                     <img className=' w-[4vw]  md:w-[1.5vw] translate-y-0.5 invert-100' src="/icons/arrow_tilted.svg" alt="" /></div>
-                            </div>
+                            </Link>
                             <div className=" w-full text-sm lg:text-base lg:w-[30%] leading-none">
                                 <p className=''>Transformative redesign of workspaces that enhance functionality, reflect brand identity, and create engaging professional environments.</p>
                             </div>
@@ -201,14 +176,14 @@ const ServiceSlider = () => {
                             </div>
                         </div>
                         <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
-                            <div onClick={() => navigate(router, "/services/space-planning")}>
-                                <div className=' relative group cursor-pointer flex items-center gap-5 leading-none text-3xl lg:text-5xl uppercase'>
+                            <Link href="/services/space-planning">
+                                <div className=' relative group flex items-center gap-5 leading-none text-3xl lg:text-5xl uppercase'>
                                     <div className=" absolute bottom-0 rounded-full w-0 group-hover:w-full transition-all duration-300 h-[1px] bg-[#FFFDF6]"></div>
                                     <p>
                                         space planning
                                     </p>
                                     <img className=' w-[4vw]  md:w-[1.5vw] translate-y-0.5 invert-100' src="/icons/arrow_tilted.svg" alt="" /></div>
-                            </div>
+                            </Link>
                             <div className=" w-full text-sm lg:text-base lg:w-[30%] leading-none">
                                 <p className=''>Comprehensive planning of form and flow to create efficient, balanced, and experience-driven living or working spaces.</p>
                             </div>
@@ -235,14 +210,14 @@ const ServiceSlider = () => {
                             </div>
                         </div>
                         <div className=" flex flex-col lg:flex-row space-y-5 lg:space-y-0  lg:items-end justify-between">
-                            <div onClick={() => navigate(router, "/services/interior-styling")}>
-                                <div className=' relative group cursor-pointer flex items-center gap-5 leading-none text-3xl lg:text-5xl uppercase'>
+                            <Link href="/services/interior-styling">
+                                <div className=' relative group flex items-center gap-5 leading-none text-3xl lg:text-5xl uppercase'>
                                     <div className=" absolute bottom-0 rounded-full w-0 group-hover:w-full transition-all duration-300 h-[1px] bg-[#FFFDF6]"></div>
                                     <p>
                                         Interior styling
                                     </p>
                                     <img className=' w-[4vw]  md:w-[1.5vw] translate-y-0.5 invert-100' src="/icons/arrow_tilted.svg" alt="" /></div>
-                            </div>
+                            </Link>
                             <div className=" w-full text-sm lg:text-base lg:w-[30%] leading-none">
                                 <p className=''>Thoughtful selection of materials and decor that refine spaces with balance, texture, and timeless visual appeal.</p>
                             </div>
@@ -259,4 +234,4 @@ const ServiceSlider = () => {
     )
 }
 
-export default ServiceSlider
+export default ServicesSection

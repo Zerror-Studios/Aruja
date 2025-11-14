@@ -207,7 +207,7 @@ const { isVisible, isAtTop } = useHeadroom(100);
             // href="/contact"
             onClick={() => navigate(router, "/contact")}
           >
-            <button className=' cursor-pointer hidden lg:block hover:scale-95 hover:rounded-[4px] transition-all duration-300 uppercase bg-[#2E2D2B] text-[#FFFDF4] py-2 px-4 lg:px-6'>
+            <button className=' cursor-pointer hidden lg:block hover:scale-95 hover:rounded-[4px] transition-all duration-300 uppercase bg-[#454738] text-[#FFFDF4] py-2 px-4 lg:px-6'>
               <p className=' text-xs lg:text-sm'>Let's talk</p>
             </button>
           </a>

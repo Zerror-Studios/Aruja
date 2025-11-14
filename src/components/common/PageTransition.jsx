@@ -19,26 +19,29 @@ const PageTransition = React.forwardRef((_, ref) => {
           onComplete: resolve,
         });
 
-        tl.set(el, { autoAlpha: 0 }); 
+        tl.set(el, { autoAlpha: 0 });
         tl.to(el, {
           autoAlpha: 1,
           ease: "ease-secondary",
           duration: 0.35,
+          onComplete:() => {
+            window.scrollTo(0, 0);
+          }
         });
       }),
-      
-fadeOut: () =>
-  new Promise((resolve) => {
-    const el = screenRef.current;
-    if (!el) return resolve();
 
-    gsap.to(el, {
-      autoAlpha: 0,
-      duration: 0.35,
-      ease: "ease-secondary",
-      onComplete: resolve,
-    });
-  }),
+    fadeOut: () =>
+      new Promise((resolve) => {
+        const el = screenRef.current;
+        if (!el) return resolve();
+
+        gsap.to(el, {
+          autoAlpha: 0,
+          duration: 0.35,
+          ease: "ease-secondary",
+          onComplete: resolve,
+        });
+      }),
 
   }));
 
