@@ -102,12 +102,12 @@ const ServiceSlider = () => {
     });
 
     useEffect(() => {
-        const cursor = cursorRef.current;
-        const header = document.querySelector(".header");
-        const logo_div = document.querySelector(".logo_div");
-        const serv_slider_paren = document.querySelector(".serv_slider_paren");
+        if (window.innerWidth < 1020) return;
 
-        if (!cursor || !header) return;
+        const cursor = cursorRef.current;
+        const servSlider = document.querySelector(".serv_slider_paren");
+
+        if (!cursor || !servSlider) return;
 
         const hideCursor = () => {
             gsap.to(cursor, {
@@ -134,22 +134,22 @@ const ServiceSlider = () => {
             });
         };
 
-        // mouse move follow
-        window.addEventListener("mousemove", moveCursor);
-        serv_slider_paren.addEventListener("mousemove", showCursor);
+        // Cursor should follow ONLY inside serv_slider_paren
+        servSlider.addEventListener("mousemove", moveCursor);
+        servSlider.addEventListener("mouseenter", showCursor);
+        servSlider.addEventListener("mouseleave", hideCursor);
 
-        // header interaction
-        header.addEventListener("mouseenter", hideCursor);
-        header.addEventListener("mouseleave", showCursor);
-        logo_div.addEventListener("mouseenter", hideCursor);
-        logo_div.addEventListener("mouseleave", showCursor);
+        // Cursor should be hidden everywhere else
+        window.addEventListener("mousemove", (e) => {
+            if (!servSlider.contains(e.target)) {
+                hideCursor();
+            }
+        });
 
         return () => {
-            window.removeEventListener("mousemove", moveCursor);
-            header.removeEventListener("mouseenter", hideCursor);
-            header.removeEventListener("mouseleave", showCursor);
-            logo_div.removeEventListener("mouseenter", hideCursor);
-            logo_div.removeEventListener("mouseleave", showCursor);
+            servSlider.removeEventListener("mousemove", moveCursor);
+            servSlider.removeEventListener("mouseenter", showCursor);
+            servSlider.removeEventListener("mouseleave", hideCursor);
         };
     }, []);
 
@@ -161,10 +161,10 @@ const ServiceSlider = () => {
                 ref={cursorRef}
                 className="service_custom-cursor text-xs -translate-x-1/2 -translate-y-1/2 opacity-0 px-4 py-2 top-0 left-0 z-[999999] bg-[#2E2D2B] text-[#FFFDF4] fixed pointer-events-none"
             >
-                <h2 className="uppercase">View</h2>
+                <p className="">Explore</p>
             </div>
 
-            <div id='services' className="  serv_slider_paren overflow-hidden w-full center  text-[#FFFDF6] h-screen relative">
+            <div id='services' className=" cursor-none  serv_slider_paren overflow-hidden w-full center  text-[#FFFDF6] h-screen relative">
                 <img
                     onClick={() => navigate(router, "/services/residential-interior")}
                     className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/services/servImg4.webp" alt="loading" />
@@ -203,7 +203,13 @@ const ServiceSlider = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="h-[60%] w-full">
+                    <div className="h-[60%] relative w-full">
+                        <div
+                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-xs  px-4 py-2 left-1/2 -translate-x-1/2 z-[99] bg-[#2E2D2B] text-[#FFFDF4]"
+                        >
+                            <p className="">Explore</p>
+                            <img className='invert-100 w-2' src="/icons/arrow_tilted.svg" alt="" />
+                        </div>
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
                             className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg4.webp" alt="loading" />
@@ -234,7 +240,13 @@ const ServiceSlider = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="h-[60%] w-full">
+                    <div className="h-[60%] relative w-full">
+                        <div
+                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-xs  px-4 py-2 left-1/2 -translate-x-1/2 z-[99] bg-[#2E2D2B] text-[#FFFDF4]"
+                        >
+                            <p className="">Explore</p>
+                            <img className='invert-100 w-2' src="/icons/arrow_tilted.svg" alt="" />
+                        </div>
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
                             className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg2.webp" alt="loading" />
@@ -265,7 +277,13 @@ const ServiceSlider = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="h-[60%] w-full">
+                    <div className="h-[60%] relative w-full">
+                        <div
+                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-xs  px-4 py-2 left-1/2 -translate-x-1/2 z-[99] bg-[#2E2D2B] text-[#FFFDF4]"
+                        >
+                            <p className="">Explore</p>
+                            <img className='invert-100 w-2' src="/icons/arrow_tilted.svg" alt="" />
+                        </div>
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
                             className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg3.webp" alt="loading" />
@@ -296,7 +314,13 @@ const ServiceSlider = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="h-[60%] w-full">
+                    <div className="h-[60%] relative w-full">
+                        <div
+                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-xs  px-4 py-2 left-1/2 -translate-x-1/2 z-[99] bg-[#2E2D2B] text-[#FFFDF4]"
+                        >
+                            <p className="">Explore</p>
+                            <img className='invert-100 w-2' src="/icons/arrow_tilted.svg" alt="" />
+                        </div>
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
                             className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg1.webp" alt="loading" />

@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ServiceDetail = () => {
 
-  const { navigate } = useNavigation();
+    const { navigate } = useNavigation();
     const router = useRouter();
     const service = ServicesData.find(item => item.slug === router?.query?.slug);
     const otherServices = ServicesData.filter(
@@ -163,7 +163,7 @@ const ServiceDetail = () => {
                 gsap.to(el, {
                     x: 0,
                     y: 0,
-                    duration: 0.5,
+                    duration: 0.8,
                     ease: "elastic.out(1, 0.4)",
                 });
             };
@@ -182,7 +182,7 @@ const ServiceDetail = () => {
     return (
         <div>
             <SeoHeader meta={meta} />
-            <div className="  w-full h-[100vh] lg:h-[120vh] relative text-[#FFFDF4] ">
+            <div className="  w-full h-[95vh] lg:h-[120vh] relative text-[#FFFDF4] ">
                 <div className=" stic_image_pent   w-full h-full overflow-hidden relative center">
                     <img
                         src={service?.heroImg}
@@ -277,25 +277,25 @@ const ServiceDetail = () => {
                 <div className="w-full h-[100vw] mt-8 md:mt-0 md:h-[40vw] center relative ">
                     <p className='absolute hidden md:block  right-0 w-[15%] leading-tight '>{service?.whyChoose.para}</p>
                     <div className=" circl_1   w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute -translate-x-[45%] md:-translate-x-[18vw] -translate-y-[45%] md:-translate-y-[9vw]">
-                        <div className="magnetic w-full h-full center flex-col text-center ">
+                        <div className="magnetic rounded-full w-full h-full center flex-col text-center ">
                             <p>01/</p>
                             <p>{service?.whyChoose.data[0]}</p>
                         </div>
                     </div>
                     <div className=" circl_2 w-[50vw]  md:w-[20vw] font-semibold border border-[#979797]  uppercase flex-col leading-tight text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6] center text-center rounded-full  aspect-square absolute -translate-y-[45%] translate-x-[45%] md:translate-x-0 md:-translate-y-[9vw]">
-                        <div className="magnetic w-full h-full center flex-col text-center ">
+                        <div className="magnetic rounded-full w-full h-full center flex-col text-center ">
                             <p>02/</p>
                             <p>{service?.whyChoose.data[1]}</p>
                         </div>
                     </div>
                     <div className=" circl_3  w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute -translate-x-[45%] md:translate-x-0 translate-y-[45%] md:translate-y-[9vw]">
-                        <div className="magnetic w-full h-full center flex-col text-center ">
+                        <div className="magnetic rounded-full w-full h-full center flex-col text-center ">
                             <p>03/</p>
                             <p>{service?.whyChoose.data[2]}</p>
                         </div>
                     </div>
                     <div className=" circl_4 w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute translate-x-[45%] md:translate-x-[18vw] translate-y-[45%] md:translate-y-[9vw]">
-                        <div className="magnetic w-full h-full center flex-col text-center ">
+                        <div className="magnetic rounded-full w-full h-full center flex-col text-center ">
                             <p>04/</p>
                             <p>{service?.whyChoose.data[3]}</p>
                         </div>
@@ -320,13 +320,16 @@ const ServiceDetail = () => {
             </div>
             <div className="w-full relative mb-8 lg:mb-14 px-3 lg:px-10  ">
                 <div className=" text-xl lg:text-4xl uppercase">
-                    <p className='leading-none font-semibold lg:w-[40%] mt-2 md:mt-4'>Explore More Services</p>
+                    <p className='leading-none font-semibold lg:w-[40%] mt-2 md:mt-4'>Explore other Services</p>
                 </div>
                 <div className=" mt-5 w-full grid gap-y-4 grid-cols-2 md:grid-cols-3 gap-x-2 lg:gap-x-5">
                     {otherServices.map((item, i) => (
-                        <div key={i} onClick={() => navigate(router, `/services/${item.slug}`)} className="w-full cursor-pointer">
-                            <div className="w-full aspect-[5/3] ">
-                                <img className='w-full h-full object-cover' src={item.heroImg} alt={item.title} />
+                        <div
+                            data-aos-anchor-placement="top-bottom"
+                            data-aos="clip"
+                            data-aos-delay={i * 100} key={i} onClick={() => navigate(router, `/services/${item.slug}`)} className="w-full  group cursor-pointer">
+                            <div className="w-full overflow-hidden aspect-[5/3] ">
+                                <img className=' group-hover:scale-105 transition-all duration-300 w-full h-full object-cover' src={item.heroImg} alt={item.title} />
                             </div>
                             <p className='uppercase text-xs lg:text-base font-semibold mt-1'>{item.title}</p>
                         </div>
