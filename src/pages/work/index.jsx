@@ -32,12 +32,9 @@ const Index = () => {
     },
     robots: "index,follow"
   };
-
-
-
   const router = useRouter();
   const { navigate } = useNavigation();
-  const [view, setView] = useState("horizontal");
+  const [view, setView] = useState("vertical");
 
   const verticalRef = useRef(null);
   const horizontalRef = useRef(null);

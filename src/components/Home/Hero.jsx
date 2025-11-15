@@ -334,10 +334,10 @@ const Hero = () => {
             <div className=" hero_paren  w-full center h-screen relative overflow-hidden">
                 <p className='  left_txt_2a text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 left-2 -translate-y-1/2  text-white z-[1] '>Designed</p>
                 <p className=' right_txt_2a  text-xs lg:text-sm pointer-events-none font-semibold  uppercase absolute top-1/2 right-2 -translate-y-1/2  text-white z-[1] '>For you </p>
-                {/* <img className='-bottom-4 left-1/2 -translate-x-1/2 absolute z-[1] w-[7%]' src="/mono_white.png" alt="" /> */}
+                {/* <img className='-bottom-4 left-1/2 -translate-x-1/2 absolute z-[1] w-[7%]' src="/mono_white.png" alt="loading" /> */}
                 <div className=" group  bottom-2 left-1/2 -translate-x-[30%] absolute shrink-0  z-[1] flex items-end">
                     <div className=" shrink-0 size-[4vw] border-[2px] overflow-hidden   transition-colors group-hover:border-[#2e2d2b] border-white flex  relative   items-end">
-                        <img className='  w-[1.8vw] group-hover:invert-[.125] transition-all invert-[100]' src="/logo.png" alt="" />
+                        <img className='  w-[1.8vw] group-hover:invert-[.125] transition-all invert-[100]' src="/logo.png" alt="loading" />
                         <div className=" shrink-0 size-[3.9vw] group-hover:bg-[#2e2d2b] transition-colors  bg-white    rotate_anim_box rotate-[-15deg]    translate-y-[-1.5vw] origin-center    translate-x-[0.17vw] ">
                         </div>
                     </div>

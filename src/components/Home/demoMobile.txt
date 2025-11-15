@@ -228,7 +228,7 @@ const MobileHero = () => {
                 <div className="   bottom-2 left-1/2 -translate-x-[30%] absolute shrink-0  z-[1] flex items-end">
                     <div className=" shrink-0  flex items-end relative">
                         <div className=" shrink-0 size-[10vw] border-[.25vw] overflow-hidden  border-[#ffffff] flex  relative   items-end">
-                            <img className='w-[5vw] invert-[100]' src="/logo.png" alt="" />
+                            <img className='w-[5vw] invert-[100]' src="/logo.png" alt="loading" />
                             <div className=" shrink-0 size-[9.75vw]  bg-[#ffffff] rotate_anim_box    translate-y-[-6vw] origin-center   rotate-[-15deg] translate-x-[-0.6vw] ">
                             </div>
                         </div>

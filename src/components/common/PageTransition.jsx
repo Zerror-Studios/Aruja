@@ -24,8 +24,14 @@ const PageTransition = React.forwardRef((_, ref) => {
           autoAlpha: 1,
           ease: "ease-secondary",
           duration: 0.35,
-          onComplete:() => {
+          onComplete: () => {
+                if (window) {
             window.scrollTo(0, 0);
+            if (window.lenis) {
+                window.lenis.scrollTo(0, { immediate: true });
+                window.lenis.resize();
+            }
+        }
           }
         });
       }),
@@ -39,6 +45,15 @@ const PageTransition = React.forwardRef((_, ref) => {
           autoAlpha: 0,
           duration: 0.35,
           ease: "ease-secondary",
+          onStart: () => {
+                if (window) {
+            window.scrollTo(0, 0);
+            if (window.lenis) {
+                window.lenis.scrollTo(0, { immediate: true });
+                window.lenis.resize();
+            }
+        }
+          },
           onComplete: resolve,
         });
       }),

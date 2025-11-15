@@ -29,7 +29,7 @@ const Footer = () => {
         <div className=" flex items-end aspect-[3/4]">
           <div className=" shrink-0  flex items-end relative">
             <div className=" shrink-0 size-[10vw] border-[.25vw] overflow-hidden  border-[#2e2d2b] flex  relative   items-end">
-              <img className='w-[5vw] invert-[.125]' src="/logo.png" alt="" />
+              <img className='w-[5vw] invert-[.125]' src="/logo.png" alt="loading" />
               <div className=" shrink-0 size-[9.75vw]  bg-[#2e2d2b] rotate_anim_box    translate-y-[-6vw] origin-center   rotate-[-15deg] translate-x-[-0.6vw] ">
               </div>
             </div>

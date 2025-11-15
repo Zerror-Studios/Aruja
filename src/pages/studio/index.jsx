@@ -703,7 +703,7 @@ const index = () => {
                         <div className=" hidden  w-full lg:flex justify-between">
                             <div className="  relative shrink-0  flex items-end">
                                 <div className=" shrink-0 size-[6vw] border-[2px] overflow-hidden   transition-colors  border-[#2e2d2b] flex  relative   items-end">
-                                    <img className='  w-[3vw] invert-[.125] transition-all' src="/logo.png" alt="" />
+                                    <img className='  w-[3vw] invert-[.125] transition-all' src="/logo.png" alt="loading" />
                                     <div className=" shrink-0 size-[5.9vw]  transition-colors  bg-[#2e2d2b]     rotate-[-15deg]    translate-y-[-3vw] rotate_anim_box origin-center    translate-x-[-1vw] ">
                                     </div>
                                 </div>

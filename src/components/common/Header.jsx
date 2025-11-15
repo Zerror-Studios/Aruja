@@ -66,7 +66,7 @@ const { isVisible, isAtTop } = useHeadroom(100);
     <>
 
       {/* /logo/ */}
-      <div className="fixed top-0 p-3 lg:p-4 lg:px-10 z-[99999]">
+      <div className=" logo_div fixed top-0 p-3 lg:p-4 lg:px-10 z-[99999]">
           <a
             href="/"
             className='relative block center  group'

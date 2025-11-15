@@ -53,7 +53,7 @@ const index = () => {
                 <div
                     style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
                     className=" ctct_clip_div h-[60vh] relative  lg:h-full w-full  flex items-end justify-center md:justify-start lg:justify-center lg:w-[30%]">
-                    <img className="w-full h-full object-cover" src="/Images/ContactPageImg.webp" alt="" />
+                    <img className="w-full h-full object-cover" src="/Images/ContactPageImg.webp" alt="loading" />
                     <div className="absolute text-sm md:text-lg z-[1] p-8 md:left-6 lg:left-auto bottom-6 bg-[#fffdf6] w-[90%] md:w-fit lg:w-[90%] ">
                         <div className="uppercase ">
                             <div className="flex gap-5">

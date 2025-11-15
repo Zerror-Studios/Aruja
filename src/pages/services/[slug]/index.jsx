@@ -16,9 +16,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ServiceDetail = () => {
 
-
+  const { navigate } = useNavigation();
     const router = useRouter();
     const service = ServicesData.find(item => item.slug === router?.query?.slug);
+    const otherServices = ServicesData.filter(
+        item => item.slug !== router?.query?.slug
+    );
+
 
     const meta = {
         title: service?.seo?.title || "",
@@ -39,20 +43,20 @@ const ServiceDetail = () => {
     };
 
     usePageReady(() => {
-        if (window.innerWidth >= 1024) {
-            gsap.to(".paex_img", {
-                y: 500,
-                duration: 4,
-                ease: "linear",
-                scrollTrigger: {
-                    trigger: ".stic_image_pent",
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true,
-                    // markers: true,
-                }
-            })
-        }
+        // if (window.innerWidth >= 1024) {
+        //     gsap.to(".paex_img", {
+        //         y: 500,
+        //         duration: 4,
+        //         ease: "linear",
+        //         scrollTrigger: {
+        //             trigger: ".stic_image_pent",
+        //             start: "top top",
+        //             end: "bottom top",
+        //             scrub: true,
+        //             // markers: true,
+        //         }
+        //     })
+        // }
         gsap.to(".id_anim_txt", {
             transform: "translateY(0%)",
             stagger: 0.05,
@@ -63,13 +67,19 @@ const ServiceDetail = () => {
 
     useEffect(() => {
         if (!service) return;
+        if (window) {
+            window.scrollTo(0, 0);
+            if (window.lenis) {
+                window.lenis.scrollTo(0, { immediate: true });
+                window.lenis.resize();
+            }
+        }
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         gsap.set(".id_anim_txt", { yPercent: 105 });
 
         if (window.innerWidth >= 1024) {
             gsap.to(".paex_img", {
-                y: 500,
-                duration: 4,
+                y: 400,
                 ease: "linear",
                 scrollTrigger: {
                     trigger: ".stic_image_pent",
@@ -128,6 +138,47 @@ const ServiceDetail = () => {
     useEffect(() => {
         AOS.refresh();
     }, [service]);
+
+
+    useEffect(() => {
+        const magnets = document.querySelectorAll(".magnetic");
+
+        magnets.forEach((el) => {
+            const strength = 60; // distance pulled on hover
+
+            const handleMove = (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - (rect.left + rect.width / 2);
+                const y = e.clientY - (rect.top + rect.height / 2);
+
+                gsap.to(el, {
+                    x: x / 3,
+                    y: y / 3,
+                    duration: 0.4,
+                    ease: "power3.out",
+                });
+            };
+
+            const reset = () => {
+                gsap.to(el, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                    ease: "elastic.out(1, 0.4)",
+                });
+            };
+
+            el.addEventListener("mousemove", handleMove);
+            el.addEventListener("mouseleave", reset);
+
+            // cleanup
+            return () => {
+                el.removeEventListener("mousemove", handleMove);
+                el.removeEventListener("mouseleave", reset);
+            };
+        });
+    }, [service]);
+
     return (
         <div>
             <SeoHeader meta={meta} />
@@ -139,21 +190,21 @@ const ServiceDetail = () => {
                         className=" paex_img brightness-[.6] w-full h-full object-cover"
                     />
                 </div>
-                <div className="absolute z-10 w-full bottom-20 lg:top-[30vw] px-3 lg:px-10 ">
+                <div className="absolute z-10 w-full bottom-24 lg:top-[30vw] px-3 lg:px-10 ">
                     <div className=" block overflow-hidden text-4xl  lg:text-8xl font-semibold uppercase leading-none">
                         <p className='id_anim_txt w-[50%]    translate-y-[105%]'  >
                             {service?.title}
                         </p>
                     </div>
-                    <div className="w-full   font-semibold mt-10 gap-y-4 lg:gap-y-0 grid md:grid-cols-[50%_25%_25%]">
+                    <div className="w-full   font-semibold mt-5 lg:mt-10 gap-y-2 lg:gap-y-0 grid md:grid-cols-[50%_25%_25%]">
                         <div className="block  h-fit overflow-hidden">
-                            <p className='uppercase id_anim_txt    translate-y-[105%]'>OUR services</p>
+                            <p className='uppercase text-sm lg:text-base id_anim_txt    translate-y-[105%]'>OUR services</p>
                         </div>
                         <div className="block  h-fit overflow-hidden">
-                            <p className='uppercase id_anim_txt    translate-y-[105%]'>{service?.id}/4</p>
+                            <p className='uppercase text-sm lg:text-base id_anim_txt    translate-y-[105%]'>{service?.id}/4</p>
                         </div>
                         <div className="block  h-fit overflow-hidden">
-                            <p className='uppercase id_anim_txt    translate-y-[105%]'> {service?.heroDesc}</p>
+                            <p className='uppercase text-sm lg:text-base id_anim_txt  leading-tight  translate-y-[105%]'> {service?.heroDesc}</p>
                         </div>
                     </div>
 
@@ -168,10 +219,10 @@ const ServiceDetail = () => {
                     <p className='text-sm leading-tight lg:text-lg mt-5 md:mt-8 mb-10 md:mb-20 '>{service?.detailDescription[0].para}</p>
                     <div className="w-full flex items-end overflow-hidden  gap-3 lg:gap-5">
                         <div className="aspect-[2/3] w-[65vw] md:w-[18vw] lg:w-[14vw] ">
-                            <img className='h-full w-full object-cover' src="/Images/studioPage/right_portrait.webp" alt="" />
+                            <img className='h-full w-full object-cover' src="/Images/studioPage/right_portrait.webp" alt="loading" />
                         </div>
                         <div className="aspect-[3/4] w-[45vw] md:w-[13vw] lg:w-[10vw] ">
-                            <img className='h-full w-full object-cover' src="/Images/studioPage/studio_hero.webp" alt="" /></div>
+                            <img className='h-full w-full object-cover' src="/Images/studioPage/studio_hero.webp" alt="loading" /></div>
                     </div>
                 </div>
 
@@ -179,7 +230,7 @@ const ServiceDetail = () => {
                 <div className=" w-full md:w-1/2 mt-10 md:mt-0   flex flex-col justify-between md:pl-[4vw] lg:pl-[8vw]  border-[#C2C2C2]">
                     <div className="w-full hidden md:flex items-start justify-end  gap-5">
                         <div className="aspect-[3/4] md:w-[18vw] lg:w-[11vw] ">
-                            <img className='h-full w-full object-cover' src="/Images/projects/polymer/img_1.webp" alt="" /></div>
+                            <img className='h-full w-full object-cover' src="/Images/projects/polymer/img_1.webp" alt="loading" /></div>
                     </div>
                     <div className="">
                         <p className='uppercase text-xs lg:text-sm font-black'>
@@ -226,25 +277,33 @@ const ServiceDetail = () => {
                 <div className="w-full h-[100vw] mt-8 md:mt-0 md:h-[40vw] center relative ">
                     <p className='absolute hidden md:block  right-0 w-[15%] leading-tight '>{service?.whyChoose.para}</p>
                     <div className=" circl_1   w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute -translate-x-[45%] md:-translate-x-[18vw] -translate-y-[45%] md:-translate-y-[9vw]">
-                        <p>01/</p>
-                        <p>{service?.whyChoose.data[0]}</p>
+                        <div className="magnetic w-full h-full center flex-col text-center ">
+                            <p>01/</p>
+                            <p>{service?.whyChoose.data[0]}</p>
+                        </div>
                     </div>
                     <div className=" circl_2 w-[50vw]  md:w-[20vw] font-semibold border border-[#979797]  uppercase flex-col leading-tight text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6] center text-center rounded-full  aspect-square absolute -translate-y-[45%] translate-x-[45%] md:translate-x-0 md:-translate-y-[9vw]">
-                        <p>02/</p>
-                        <p>{service?.whyChoose.data[1]}</p>
+                        <div className="magnetic w-full h-full center flex-col text-center ">
+                            <p>02/</p>
+                            <p>{service?.whyChoose.data[1]}</p>
+                        </div>
                     </div>
                     <div className=" circl_3  w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute -translate-x-[45%] md:translate-x-0 translate-y-[45%] md:translate-y-[9vw]">
-                        <p>03/</p>
-                        <p>{service?.whyChoose.data[2]}</p>
+                        <div className="magnetic w-full h-full center flex-col text-center ">
+                            <p>03/</p>
+                            <p>{service?.whyChoose.data[2]}</p>
+                        </div>
                     </div>
                     <div className=" circl_4 w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute translate-x-[45%] md:translate-x-[18vw] translate-y-[45%] md:translate-y-[9vw]">
-                        <p>04/</p>
-                        <p>{service?.whyChoose.data[3]}</p>
+                        <div className="magnetic w-full h-full center flex-col text-center ">
+                            <p>04/</p>
+                            <p>{service?.whyChoose.data[3]}</p>
+                        </div>
                     </div>
                 </div>
 
                 <div className="w-full servi_paex_img_paren overflow-hidden h-[65vh] md:h-[100vh] mt-8 lg:mt-14 text-center relative center gap-y-10 flex-col">
-                    <img className=' servi_paex_img absolute brightness-[.9] z-[-1] w-full h-full object-cover' src="/Images/services/servImg1.webp" alt="" />
+                    <img className=' servi_paex_img absolute brightness-[.9] z-[-1] w-full h-full object-cover' src="/Images/services/servImg1.webp" alt="loading" />
                     <p className='text-[#FFFDF6]  font-semibold w-[80%] text-xl leading-none md:text-3xl lg:text-4xl uppercase'>{service?.contact.title}</p>
                     <p className='text-[#FFFDF6] w-[95%] leading-tight md:w-[70%] lg:w-[50%] text-xs md:text-lg lg:text-xl  capitalize'>{service?.contact.para}</p>
                     <a
@@ -258,6 +317,22 @@ const ServiceDetail = () => {
 
 
                 </div>
+            </div>
+            <div className="w-full relative mb-8 lg:mb-14 px-3 lg:px-10  ">
+                <div className=" text-xl lg:text-4xl uppercase">
+                    <p className='leading-none font-semibold lg:w-[40%] mt-2 md:mt-4'>Explore More Services</p>
+                </div>
+                <div className=" mt-5 w-full grid gap-y-4 grid-cols-2 md:grid-cols-3 gap-x-2 lg:gap-x-5">
+                    {otherServices.map((item, i) => (
+                        <div key={i} onClick={() => navigate(router, `/services/${item.slug}`)} className="w-full cursor-pointer">
+                            <div className="w-full aspect-[5/3] ">
+                                <img className='w-full h-full object-cover' src={item.heroImg} alt={item.title} />
+                            </div>
+                            <p className='uppercase text-xs lg:text-base font-semibold mt-1'>{item.title}</p>
+                        </div>
+                    ))}
+                </div>
+
             </div>
 
         </div>
