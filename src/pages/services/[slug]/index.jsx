@@ -255,7 +255,7 @@ const ServiceDetail = () => {
                     {service?.expertise.para}
                 </p>
 
-                <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-y-0 gap-x-6 lg:gap-x-20 mt-[40vw] md:mt-[12vw]">
+                <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-y-0 gap-x-6 lg:gap-x-20 mt-[50vw] md:mt-[12vw]">
                     {service && service.expertise.data.map((item, index) => (
                         <div key={index} className=" space-y-2 lg:space-y-5">
                             <p className='uppercase leading-tight font-semibold  text-sm lg:text-2xl'>{item?.title}</p>
@@ -274,7 +274,7 @@ const ServiceDetail = () => {
                 </div>
                 <p className='md:hidden text-sm leading-none mt-2 '>{service?.whyChoose.para}</p>
 
-                <div className="w-full h-[100vw] mt-8 md:mt-0 md:h-[40vw] center relative ">
+                <div className="w-full h-[120vw] mt-8 md:mt-0 md:h-[40vw] center relative ">
                     <p className='absolute hidden md:block  right-0 w-[15%] leading-tight '>{service?.whyChoose.para}</p>
                     <div className=" circl_1   w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute -translate-x-[45%] md:-translate-x-[18vw] -translate-y-[45%] md:-translate-y-[9vw]">
                         <div className="magnetic rounded-full w-full h-full center flex-col text-center ">

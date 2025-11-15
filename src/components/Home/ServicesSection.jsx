@@ -188,7 +188,7 @@ const ServicesSection = () => {
                     </div>
                     <div className="h-[60%] relative w-full">
                         <div
-                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-xs  px-4 py-2 left-1/2 -translate-x-1/2 z-[99] bg-[#2E2D2B] text-[#FFFDF4]"
+                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-sm  px-6 py-1.5 left-1/2 -translate-x-1/2 z-[99] bg-[#454738] text-[#FFFDF4]"
                         >
                             <p className="">Explore</p>
                             <img className='invert-100 w-2' src="/icons/arrow_tilted.svg" alt="" />
@@ -225,7 +225,7 @@ const ServicesSection = () => {
                     </div>
                     <div className="h-[60%] relative w-full">
                         <div
-                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-xs  px-4 py-2 left-1/2 -translate-x-1/2 z-[99] bg-[#2E2D2B] text-[#FFFDF4]"
+                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-sm  px-6 py-1.5 left-1/2 -translate-x-1/2 z-[99] bg-[#454738] text-[#FFFDF4]"
                         >
                             <p className="">Explore</p>
                             <img className='invert-100 w-2' src="/icons/arrow_tilted.svg" alt="" />
@@ -262,7 +262,7 @@ const ServicesSection = () => {
                     </div>
                     <div className="h-[60%] relative w-full">
                         <div
-                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-xs  px-4 py-2 left-1/2 -translate-x-1/2 z-[99] bg-[#2E2D2B] text-[#FFFDF4]"
+                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-sm  px-6 py-1.5 left-1/2 -translate-x-1/2 z-[99] bg-[#454738] text-[#FFFDF4]"
                         >
                             <p className="">Explore</p>
                             <img className='invert-100 w-2' src="/icons/arrow_tilted.svg" alt="" />
@@ -299,7 +299,7 @@ const ServicesSection = () => {
                     </div>
                     <div className="h-[60%] relative w-full">
                         <div
-                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-xs  px-4 py-2 left-1/2 -translate-x-1/2 z-[99] bg-[#2E2D2B] text-[#FFFDF4]"
+                            className=" lg:hidden absolute flex items-center gap-2 bottom-4 h-fit text-sm  px-6 py-1.5 left-1/2 -translate-x-1/2 z-[99] bg-[#454738] text-[#FFFDF4]"
                         >
                             <p className="">Explore</p>
                             <img className='invert-100 w-2' src="/icons/arrow_tilted.svg" alt="" />
