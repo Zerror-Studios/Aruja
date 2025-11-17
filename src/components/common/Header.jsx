@@ -108,8 +108,10 @@ const Header = () => {
       </div>
 
       {/* /logo/ */}
-      <div className=" logo_div fixed top-0 p-3 lg:p-4 lg:px-10 z-[99999]">
+      <div  className=" logo_div fixed top-0 p-3 lg:p-4 lg:px-10 z-[99999]">
         <a
+            onMouseEnter={removeServiceHover}
+
           href="/"
           className='relative block center  group'
           onClick={() => navigate(router, "/")}
@@ -202,6 +204,7 @@ const Header = () => {
         <div className="flex items-center gap-10  h-full">
           <a
             // href="/work"
+            onMouseEnter={removeServiceHover}
             onClick={() => navigate(router, "/work")}
             className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
@@ -212,6 +215,7 @@ const Header = () => {
 
           <a
             // href="/studio"
+            onMouseEnter={removeServiceHover}
             onClick={() => navigate(router, "/studio")}
             className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
@@ -224,7 +228,6 @@ const Header = () => {
             //  href="services"
             onClick={() => navigate(router, "/services")}
             onMouseEnter={serviceHover}
-            onMouseLeave={removeServiceHover}
             className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
             <p className='font-semibold'>
@@ -235,6 +238,7 @@ const Header = () => {
           {
             currentPath === "/" && (
               <a
+            onMouseEnter={removeServiceHover}
                 href="#reviews"
                 // onClick={() => navigate(router, "/services")}
                 className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
@@ -249,6 +253,7 @@ const Header = () => {
 
           <a
             // href="/contact"
+            onMouseEnter={removeServiceHover}
             onClick={() => navigate(router, "/contact")}
           >
             <button className=' cursor-pointer hidden lg:block hover:scale-95 hover:rounded-[4px] transition-all duration-300 uppercase bg-[#454738] text-[#FFFDF4] py-2 px-4 lg:px-6'>
