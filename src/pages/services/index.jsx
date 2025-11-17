@@ -167,16 +167,16 @@ const ServiceSlider = () => {
             <div id='services' className=" cursor-none  serv_slider_paren overflow-hidden w-full center  text-[#FFFDF6] h-screen relative">
                 <img
                     onClick={() => navigate(router, "/services/residential-interior")}
-                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/services/servImg4.webp" alt="loading" />
+                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/services/Residential/heroImg.webp" alt="loading" />
                 <img
                     onClick={() => navigate(router, "/services/commercial-interiors")}
-                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_2 w-full h-full absolute object-cover top-0 left-0 z-[3] ' src="/Images/services/servImg2.webp" alt="loading" />
+                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_2 w-full h-full absolute object-cover top-0 left-0 z-[3] ' src="/Images/services/Commercial/heroImg.webp" alt="loading" />
                 <img
                     onClick={() => navigate(router, "/services/space-planning")}
-                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_3 w-full h-full absolute object-cover top-0 left-0 z-[2] ' src="/Images/services/servImg3.webp" alt="loading" />
+                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_3 w-full h-full absolute object-cover top-0 left-0 z-[2] ' src="/Images/services/Space/heroImg.webp" alt="loading" />
                 <img
                     onClick={() => navigate(router, "/services/interior-styling")}
-                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_4 w-full h-full absolute object-cover top-0 left-0 z-[1] ' src="/Images/services/servImg1.webp" alt="loading" />
+                    className=' serv_clip_div_back opacity-0 serv_slide_bg_img_4 w-full h-full absolute object-cover top-0 left-0 z-[1] ' src="/Images/services/Styling/heroImg.webp" alt="loading" />
 
                 <div onClick={() => navigate(router, "/services/residential-interior")} className=" serv_slide_bg_img_1 absolute w-[90%] lg:w-[80%] h-[70%]  lg:h-[80%] bg-[#454738] z-[15] p-5 lg:p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
@@ -212,7 +212,7 @@ const ServiceSlider = () => {
                         </div>
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg4.webp" alt="loading" />
+                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/Residential/heroImg.webp" alt="loading" />
                     </div>
                 </div>
 
@@ -249,7 +249,7 @@ const ServiceSlider = () => {
                         </div>
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg2.webp" alt="loading" />
+                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/Commercial/heroImg.webp" alt="loading" />
                     </div>
                 </div>
 
@@ -286,7 +286,7 @@ const ServiceSlider = () => {
                         </div>
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg3.webp" alt="loading" />
+                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/Space/heroImg.webp" alt="loading" />
                     </div>
                 </div>
 
@@ -323,7 +323,7 @@ const ServiceSlider = () => {
                         </div>
                         <img
                             style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/servImg1.webp" alt="loading" />
+                            className='w-full h-full object-cover serv_clip_div ' src="/Images/services/Styling/heroImg.webp" alt="loading" />
                     </div>
                 </div>
             </div>

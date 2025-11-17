@@ -219,10 +219,10 @@ const ServiceDetail = () => {
                     <p className='text-sm leading-tight lg:text-lg mt-5 md:mt-8 mb-10 md:mb-20 '>{service?.detailDescription[0].para}</p>
                     <div className="w-full flex items-end overflow-hidden  gap-3 lg:gap-5">
                         <div className="aspect-[2/3] w-[65vw] md:w-[18vw] lg:w-[14vw] ">
-                            <img className='h-full w-full object-cover' src="/Images/studioPage/right_portrait.webp" alt="loading" />
+                            <img className='h-full w-full object-cover' src={service?.detailDescription[0].img1} alt="loading" />
                         </div>
                         <div className="aspect-[3/4] w-[45vw] md:w-[13vw] lg:w-[10vw] ">
-                            <img className='h-full w-full object-cover' src="/Images/studioPage/studio_hero.webp" alt="loading" /></div>
+                            <img className='h-full w-full object-cover' src={service?.detailDescription[0].img2} alt="loading" /></div>
                     </div>
                 </div>
 
@@ -230,7 +230,7 @@ const ServiceDetail = () => {
                 <div className=" w-full md:w-1/2 mt-10 md:mt-0   flex flex-col justify-between md:pl-[4vw] lg:pl-[8vw]  border-[#C2C2C2]">
                     <div className="w-full hidden md:flex items-start justify-end  gap-5">
                         <div className="aspect-[3/4] md:w-[18vw] lg:w-[11vw] ">
-                            <img className='h-full w-full object-cover' src="/Images/projects/polymer/img_1.webp" alt="loading" /></div>
+                            <img className='h-full w-full object-cover' src={service?.detailDescription[1].img} alt="loading" /></div>
                     </div>
                     <div className="">
                         <p className='uppercase text-xs lg:text-sm font-black'>
@@ -244,7 +244,7 @@ const ServiceDetail = () => {
             </div>
 
             <div className=" servi_paex_vid_paren overflow-hidden w-full h-screen center">
-                <video className=' servi_paex_vid w-full h-full object-cover' loop autoPlay muted playsInline src="/video/vid1.mp4"></video>
+                <video className=' servi_paex_vid w-full h-full object-cover' loop autoPlay muted playsInline src={service?.video}></video>
             </div>
 
             <div className="px-3 lg:px-10 py-10 lg:py-16 w-full  bg-[#454738] text-[#FFFDF6]">
@@ -279,31 +279,31 @@ const ServiceDetail = () => {
                     <div className=" circl_1   w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute -translate-x-[45%] md:-translate-x-[18vw] -translate-y-[45%] md:-translate-y-[9vw]">
                         <div className="magnetic rounded-full w-full h-full center flex-col text-center ">
                             <p>01/</p>
-                            <p>{service?.whyChoose.data[0]}</p>
+                            <p className='w-[80%] lg:w-[95%]'>{service?.whyChoose.data[0]}</p>
                         </div>
                     </div>
                     <div className=" circl_2 w-[50vw]  md:w-[20vw] font-semibold border border-[#979797]  uppercase flex-col leading-tight text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6] center text-center rounded-full  aspect-square absolute -translate-y-[45%] translate-x-[45%] md:translate-x-0 md:-translate-y-[9vw]">
                         <div className="magnetic rounded-full w-full h-full center flex-col text-center ">
                             <p>02/</p>
-                            <p>{service?.whyChoose.data[1]}</p>
+                            <p className='w-[80%] lg:w-[95%]'>{service?.whyChoose.data[1]}</p>
                         </div>
                     </div>
                     <div className=" circl_3  w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute -translate-x-[45%] md:translate-x-0 translate-y-[45%] md:translate-y-[9vw]">
                         <div className="magnetic rounded-full w-full h-full center flex-col text-center ">
                             <p>03/</p>
-                            <p>{service?.whyChoose.data[2]}</p>
+                            <p className='w-[80%] lg:w-[95%]'>{service?.whyChoose.data[2]}</p>
                         </div>
                     </div>
                     <div className=" circl_4 w-[50vw]  md:w-[20vw]  border border-[#979797]  center text-center  font-semibold  uppercase flex-col leading-tight transition-all duration-300 hover:z-10 hover:bg-[#454738] hover:text-[#FFFDF6]  text-[3vw] md:text-[1.1vw] px-[2.5vw] gap-y-2 rounded-full  aspect-square absolute translate-x-[45%] md:translate-x-[18vw] translate-y-[45%] md:translate-y-[9vw]">
                         <div className="magnetic rounded-full w-full h-full center flex-col text-center ">
                             <p>04/</p>
-                            <p>{service?.whyChoose.data[3]}</p>
+                            <p className='w-[80%] lg:w-[95%]'>{service?.whyChoose.data[3]}</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="w-full servi_paex_img_paren overflow-hidden h-[65vh] md:h-[100vh] mt-8 lg:mt-14 text-center relative center gap-y-10 flex-col">
-                    <img className=' servi_paex_img absolute brightness-[.9] z-[-1] w-full h-full object-cover' src="/Images/services/servImg1.webp" alt="loading" />
+                    <img className=' servi_paex_img absolute brightness-[.9] z-[-1] w-full h-full object-cover' src="/Images/ContactPageImg.webp" alt="loading" />
                     <p className='text-[#FFFDF6]  font-semibold w-[80%] text-xl leading-none md:text-3xl lg:text-4xl uppercase'>{service?.contact.title}</p>
                     <p className='text-[#FFFDF6] w-[95%] leading-tight md:w-[70%] lg:w-[50%] text-xs md:text-lg lg:text-xl  capitalize'>{service?.contact.para}</p>
                     <a

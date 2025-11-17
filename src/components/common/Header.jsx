@@ -95,7 +95,7 @@ const Header = () => {
     if (expandService) {
       gsap.to(".expand_serv_div_mob", {
         height: "160px",
-        paddingTop: "10px",
+        paddingTop: "15px",
         duration: .5,
         ease: "ease-secondary"
       })
@@ -117,9 +117,9 @@ const Header = () => {
         ease: "ease-secondary"
       })
     }
-    
+
   }, [expandService])
-  
+
 
   return (
     <>
@@ -191,7 +191,7 @@ const Header = () => {
             </div>
             <div className=" expand_serv_div_mob h-0 overflow-hidden space-y-2 px-2">
               {ServicesData.map((item, i) => (
-                <p key={i} onClick={() =>{closeMenu(); navigate(router, `/services/${item.slug}`)} }className='text-base capitalize border-b border-black/20 pb-1'>{item.title}</p>
+                <p key={i} onClick={() => { closeMenu(); navigate(router, `/services/${item.slug}`) }} className='text-base capitalize border-b border-black/20 pb-1'>{item.title}</p>
               ))}
             </div>
           </div>
