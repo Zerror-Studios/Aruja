@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import Link from 'next/link';
 import CustomEase from 'gsap/dist/CustomEase'
 import { useRouter } from "next/router";
-import { RiCloseLine, RiMenu3Line, RiMenuLine } from '@remixicon/react';
+import { RiArrowDownSLine, RiCloseLine, RiMenu3Line, RiMenuLine } from '@remixicon/react';
 import useNavigation from '@/store/useNavigation';
 import { usePageReady } from '../hooks/usePageReady';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -17,6 +17,7 @@ const Header = () => {
   CustomEase.create("in-out-quint", "0.83,0,0.17,1");
   const router = useRouter();
   const currentPath = router.pathname;
+  const [expandService, setexpandService] = useState(false)
   const { isVisible, isAtTop } = useHeadroom(100);
   const { navigate } = useNavigation();
 
@@ -47,6 +48,7 @@ const Header = () => {
     })
   }
   const closeMenu = () => {
+    setexpandService(false)
     if (window.lenis) lenis.stop();
     gsap.to(".anii", {
       y: -50,
@@ -71,7 +73,7 @@ const Header = () => {
     })
     gsap.to(".dd_overlay , .inner_services", {
       opacity: 1,
-      stagger:0.05,
+      stagger: 0.05,
       duration: .5,
       ease: "ease-secondary",
     })
@@ -89,13 +91,43 @@ const Header = () => {
     })
   }
 
+  useEffect(() => {
+    if (expandService) {
+      gsap.to(".expand_serv_div_mob", {
+        height: "160px",
+        paddingTop: "10px",
+        duration: .5,
+        ease: "ease-secondary"
+      })
+      gsap.to(".drop_arrow_mob", {
+        rotate: 180,
+        duration: .5,
+        ease: "ease-secondary"
+      })
+    } else {
+      gsap.to(".expand_serv_div_mob", {
+        height: "0",
+        paddingTop: "0",
+        duration: .5,
+        ease: "ease-secondary"
+      })
+      gsap.to(".drop_arrow_mob", {
+        rotate: 0,
+        duration: .5,
+        ease: "ease-secondary"
+      })
+    }
+    
+  }, [expandService])
+  
+
   return (
     <>
       <div onMouseMove={removeServiceHover} className="dd_overlay opacity-0 fixed pointer-events-none h-screen w-full top-0 left-0 z-[9] backdrop-blur-[1px] bg-[#0000004d]"></div>
 
       <div
-      onMouseOver={serviceHover}
-      onMouseLeave={removeServiceHover}
+        onMouseOver={serviceHover}
+        onMouseLeave={removeServiceHover}
         style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" }} className="open_serv_nav fixed pb-10 px-10 top-0 left-0 z-[9] pt-20 overflow-hidden w-full gap-x-5  bg-[#fffdf6]  grid grid-cols-4">
         {ServicesData.map((item, i) => (
           <div key={i} onClick={() => navigate(router, `/services/${item.slug}`)} className="w-full inner_services opacity-0 group cursor-pointer">
@@ -108,9 +140,9 @@ const Header = () => {
       </div>
 
       {/* /logo/ */}
-      <div  className=" logo_div fixed top-0 p-3 lg:p-4 lg:px-10 z-[99999]">
+      <div className=" logo_div fixed top-0 p-3 lg:p-4 lg:px-10 z-[99999]">
         <a
-            onMouseEnter={removeServiceHover}
+          onMouseEnter={removeServiceHover}
 
           href="/"
           className='relative block center  group'
@@ -126,7 +158,7 @@ const Header = () => {
         <div className=" absolute  right-5 w-full flex justify-end">
           <RiCloseLine size={30} onClick={closeMenu} />
         </div>
-        <div className="w-full h-full center flex-col gap-5">
+        <div className="w-full flex flex-col justify-center h-full space-y-5">
           <div
             onClick={() => { navigate(router, "/work"), closeMenu() }}
             className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
@@ -147,12 +179,21 @@ const Header = () => {
 
 
           <div
-            onClick={() => { navigate(router, "/services"), closeMenu() }}
-            className='uppercase  group relative w-fit block overflow-hidden text-2xl '>
+            className='uppercase  group relative w-full block overflow-hidden text-2xl '>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
-            <p className='anii'>
-              services
-            </p>
+            <div className="w-full justify-between flex">
+              <p
+                onClick={() => { navigate(router, "/services"), closeMenu() }}
+                className='anii'>
+                services
+              </p>
+              <RiArrowDownSLine className='drop_arrow_mob anii' onClick={() => setexpandService(!expandService)} size={25} />
+            </div>
+            <div className=" expand_serv_div_mob h-0 overflow-hidden space-y-2 px-2">
+              {ServicesData.map((item, i) => (
+                <p className='text-base capitalize border-b border-black/20 pb-1'>{item.title}</p>
+              ))}
+            </div>
           </div>
           {
             currentPath === "/" && (
@@ -238,7 +279,7 @@ const Header = () => {
           {
             currentPath === "/" && (
               <a
-            onMouseEnter={removeServiceHover}
+                onMouseEnter={removeServiceHover}
                 href="#reviews"
                 // onClick={() => navigate(router, "/services")}
                 className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
