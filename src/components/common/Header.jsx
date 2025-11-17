@@ -8,6 +8,7 @@ import useNavigation from '@/store/useNavigation';
 import { usePageReady } from '../hooks/usePageReady';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import useHeadroom from '../hooks/useHeadroom';
+import { ServicesData } from '@/store/ServicesData';
 
 gsap.registerPlugin(CustomEase, ScrollTrigger);
 
@@ -16,7 +17,7 @@ const Header = () => {
   CustomEase.create("in-out-quint", "0.83,0,0.17,1");
   const router = useRouter();
   const currentPath = router.pathname;
-const { isVisible, isAtTop } = useHeadroom(100);
+  const { isVisible, isAtTop } = useHeadroom(100);
   const { navigate } = useNavigation();
 
   useEffect(() => {
@@ -62,20 +63,61 @@ const { isVisible, isAtTop } = useHeadroom(100);
     });
   }
 
+  const serviceHover = (e) => {
+    gsap.to(".open_serv_nav", {
+      duration: .5,
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      ease: "ease-secondary",
+    })
+    gsap.to(".dd_overlay , .inner_services", {
+      opacity: 1,
+      stagger:0.05,
+      duration: .5,
+      ease: "ease-secondary",
+    })
+  }
+  const removeServiceHover = (e) => {
+    gsap.to(".open_serv_nav", {
+      duration: .5,
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+      ease: "ease-secondary",
+    })
+    gsap.to(".dd_overlay , .inner_services", {
+      opacity: 0,
+      duration: .5,
+      ease: "ease-secondary",
+    })
+  }
+
   return (
     <>
+      <div onMouseMove={removeServiceHover} className="dd_overlay opacity-0 fixed pointer-events-none h-screen w-full top-0 left-0 z-[9] backdrop-blur-[1px] bg-[#0000004d]"></div>
+
+      <div
+      onMouseOver={serviceHover}
+      onMouseLeave={removeServiceHover}
+        style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" }} className="open_serv_nav fixed pb-10 px-10 top-0 left-0 z-[9] pt-20 overflow-hidden w-full gap-x-5  bg-[#fffdf6]  grid grid-cols-4">
+        {ServicesData.map((item, i) => (
+          <div key={i} onClick={() => navigate(router, `/services/${item.slug}`)} className="w-full inner_services opacity-0 group cursor-pointer">
+            <div className="w-full overflow-hidden aspect-[5/3] ">
+              <img className=' group-hover:scale-105 transition-all duration-300 w-full h-full object-cover' src={item.heroImg} alt={item.title} />
+            </div>
+            <p className='uppercase text-xs lg:text-base font-semibold mt-1'>{item.title}</p>
+          </div>
+        ))}
+      </div>
 
       {/* /logo/ */}
       <div className=" logo_div fixed top-0 p-3 lg:p-4 lg:px-10 z-[99999]">
-          <a
-            href="/"
-            className='relative block center  group'
-            onClick={() => navigate(router, "/")}
-          >
-            <img className=' group-hover:opacity-0  transition-all duration-300 w-[12vw] cursor-pointer md:w-[7vw] lg:w-[4vw]' src="/logo.png" alt="loading" />
-            <img className=' opacity-0  group-hover:opacity-100 absolute top-0 left-0 transition-all duration-300 translate-x-3 w-[121vw] cursor-pointer lg:w-[2.5vw]' src="/monogram.svg" alt="loading" />
-          </a>
-        </div>
+        <a
+          href="/"
+          className='relative block center  group'
+          onClick={() => navigate(router, "/")}
+        >
+          <img className=' group-hover:opacity-0  transition-all duration-300 w-[12vw] cursor-pointer md:w-[7vw] lg:w-[4vw]' src="/logo.png" alt="loading" />
+          <img className=' opacity-0  group-hover:opacity-100 absolute top-0 left-0 transition-all duration-300 translate-x-3 w-[121vw] cursor-pointer lg:w-[2.5vw]' src="/monogram.svg" alt="loading" />
+        </a>
+      </div>
 
       <div
         className=" open_menu right-[-100%] w-full h-[100dvh] bg-[#FFFDF6] text-[#2E2D2B] p-5 fixed z-[9999999]">
@@ -136,11 +178,11 @@ const { isVisible, isAtTop } = useHeadroom(100);
       <div className="trig_div absolute h-screen w-full pointer-events-none"></div>
       <div
         className={`header ${currentPath === "/services" ||
-            currentPath === "/studio" ||
-            currentPath === "/work" ||
-            currentPath === "/contact"
-            ? "flex"
-            : "hidden"
+          currentPath === "/studio" ||
+          currentPath === "/work" ||
+          currentPath === "/contact"
+          ? "flex"
+          : "hidden"
           } w-full p-3 lg:p-4 lg:px-10 items-center justify-between z-[9999] fixed top-0 
   transition-all duration-500 
   ${isVisible ? "translate-y-0" : "-translate-y-full"}
@@ -181,6 +223,8 @@ const { isVisible, isAtTop } = useHeadroom(100);
           <a
             //  href="services"
             onClick={() => navigate(router, "/services")}
+            onMouseEnter={serviceHover}
+            onMouseLeave={removeServiceHover}
             className='uppercase cursor-pointer hidden group relative w-fit lg:block text-sm font-semibold'>
             <div className="absolute bg-[#2E2D2B] rounded-full bottom-0.5 w-0 group-hover:w-full transition-all duration-300 h-[1px] left-0"></div>
             <p className='font-semibold'>
