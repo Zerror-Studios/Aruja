@@ -191,7 +191,7 @@ const Header = () => {
             </div>
             <div className=" expand_serv_div_mob h-0 overflow-hidden space-y-2 px-2">
               {ServicesData.map((item, i) => (
-                <p className='text-base capitalize border-b border-black/20 pb-1'>{item.title}</p>
+                <p key={i} onClick={() =>{closeMenu(); navigate(router, `/services/${item.slug}`)} }className='text-base capitalize border-b border-black/20 pb-1'>{item.title}</p>
               ))}
             </div>
           </div>
