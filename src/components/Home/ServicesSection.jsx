@@ -149,7 +149,7 @@ const ServicesSection = () => {
 
             <div id='services' className=" cursor-none  serv_slider_paren overflow-hidden w-full center  text-[#FFFDF6] h-screen relative">
                 <img
-                    onClick={() => navigate(router, "/services/residential-interior")}
+                    onClick={() => navigate(router, "/services/residential-interiors")}
                     className=' serv_clip_div_back opacity-0 serv_slide_bg_img_1 w-full h-full absolute object-cover top-0 left-0 z-[4] ' src="/Images/services/Residential/heroImg.webp" alt="loading" />
                 <img
                     onClick={() => navigate(router, "/services/commercial-interiors")}
@@ -161,7 +161,7 @@ const ServicesSection = () => {
                     onClick={() => navigate(router, "/services/interior-styling")}
                     className=' serv_clip_div_back opacity-0 serv_slide_bg_img_4 w-full h-full absolute object-cover top-0 left-0 z-[1] ' src="/Images/services/Styling/heroImg.webp" alt="loading" />
 
-                <div onClick={() => navigate(router, "/services/residential-interior")} className=" serv_slide_bg_img_1 absolute w-[90%] lg:w-[80%] h-[70%]  lg:h-[80%] bg-[#454738] z-[15] p-5 lg:p-8">
+                <div onClick={() => navigate(router, "/services/residential-interiors")} className=" serv_slide_bg_img_1 absolute w-[90%] lg:w-[80%] h-[70%]  lg:h-[80%] bg-[#454738] z-[15] p-5 lg:p-8">
                     <div className=" w-full h-[40%]  pb-5 flex flex-col justify-between">
                         <div className=" flex   justify-between">
                             <div className="flex gap-1 lg:gap-2  overflow-hidden uppercase text-sm lg:text-4xl">
@@ -177,7 +177,7 @@ const ServicesSection = () => {
                             <div className="block overflow-hidden ">
                                 <div className=' relative group  flex items-center gap-5 leading-none text-3xl lg:text-5xl uppercase'>
                                     <p>
-                                        Residential Interior
+                                        Residential Interiors
                                     </p>
                                 </div>
                             </div>

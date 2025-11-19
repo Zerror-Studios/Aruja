@@ -1,8 +1,8 @@
 export const ServicesData = [
   {
     id: 1,
-    title: "Residential Interior",
-    slug: "residential-interior",
+    title: "Residential Interiors",
+    slug: "residential-interiors",
     detailDescription: [
       {
         title: "Residential Interior Design Services in Delhi NCR",
