@@ -24,7 +24,7 @@ const Footer = () => {
     });
   })
   return (
-    <div className="w-full overflow-hidden border-t border-black/20 py-5 lg:py-5 p-3 lg:p-10 ">
+    <div className="w-full  overflow-hidden border-t border-black/20 py-5 lg:py-5 p-3 lg:p-10 ">
       <div className="flex h-[40vw] lg:h-[25vw] ">
         <div className=" flex items-end pb-2 lg:pb-0 ">
           <div className=" shrink-0  flex items-end relative">
@@ -50,37 +50,47 @@ const Footer = () => {
               )}
             </div>
 
-            <div className="uppercase flex flex-col items-end lg:items-start gap-y-2">
-              <a href="https://www.instagram.com/studioakto?igsh=MWlyY3N0dHE5ZHRneg==" target="_blank" rel="noopener noreferrer" >
-                <button>
-                  <div className='  text-sm lg:text-base relative w-fit group overflow-hidden uppercase flex items-center lg:gap-2'>
-                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                    <p>
-                      instagram
-                    </p>
-                    <div className="block relative">
-                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/arrow_tilted.svg" alt="loading" />
-                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/arrow_tilted.svg" alt="loading" />
-                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/arrow_tilted.svg" alt="loading" />
+            <div className="uppercase flex flex-col h-full justify-between   gap-y-2">
+              <div className=" w-full flex flex-col items-end ">
+                <a href="https://www.instagram.com/studioakto?igsh=MWlyY3N0dHE5ZHRneg==" target="_blank" rel="noopener noreferrer" >
+                  <button>
+                    <div className='  text-sm lg:text-base relative w-fit group overflow-hidden uppercase flex items-center lg:gap-2'>
+                      <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                      <p>
+                        instagram
+                      </p>
+                      <div className="block relative">
+                        <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/arrow_tilted.svg" alt="loading" />
+                        <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/arrow_tilted.svg" alt="loading" />
+                        <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/arrow_tilted.svg" alt="loading" />
+                      </div>
                     </div>
-                  </div>
-                </button>
-              </a>
-              <a href="https://www.linkedin.com/company/studio-arujak" target="_blank" rel="noopener noreferrer">
-                <button>
-                  <div className=' text-sm lg:text-base relative w-fit group overflow-hidden uppercase flex items-center lg:gap-2'>
-                    <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
-                    <p>
-                      linkedIn
-                    </p>
-                    <div className="block relative">
-                      <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/arrow_tilted.svg" alt="loading" />
-                      <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/arrow_tilted.svg" alt="loading" />
-                      <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/arrow_tilted.svg" alt="loading" />
+                  </button>
+                </a>
+                <a href="https://www.linkedin.com/company/studio-arujak" target="_blank" rel="noopener noreferrer">
+                  <button>
+                    <div className=' text-sm lg:text-base relative w-fit group overflow-hidden uppercase flex items-center lg:gap-2'>
+                      <div className="w-[80%]  group-hover:right-[-82%] transition-all duration-300 h-[1px]  bg-[#2E2D2B] translate-x-[-25%] bottom-0.5 right-0 absolute"></div>
+                      <p>
+                        linkedIn
+                      </p>
+                      <div className="block relative">
+                        <img className='  w-[60%] lg:w-full   opacity-0  ' src="/icons/arrow_tilted.svg" alt="loading" />
+                        <img className='  w-[60%] lg:w-full absolute  top-0 right-0 origin-top-right group-hover:scale-0 transition-all duration-300  ' src="/icons/arrow_tilted.svg" alt="loading" />
+                        <img className='   absolute  top-0 left-0 scale-0 origin-bottom-left group-hover:scale-100 transition-all duration-500 ease-in-out ' src="/icons/arrow_tilted.svg" alt="loading" />
+                      </div>
                     </div>
-                  </div>
-                </button>
-              </a>
+                  </button>
+                </a>
+              </div>
+
+              <div className="hidden md:block">
+                <p className='capitalize text-xs lg:text-sm'> All rights reserved © StudioAkto </p>
+                <div className='flex text-xs lg:text-sm gap-1 capitalize'>
+                  <p>  Developed by</p>
+                  <a href="https://www.zerrorstudios.com" target="_blank" rel="noopener noreferrer" className='  hover:scale-[.97] transition-all duration-300 underline text-xs lg:text-sm uppercase font-semibold'>Zerror studios</a>
+                </div>
+              </div>
 
             </div>
           </div>
@@ -94,8 +104,14 @@ const Footer = () => {
       </div>
       <div className="w-full center mt-2  lg:hidden uppercase leading-none">
         <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHVwvZPMrDzDbcCPPphsTmqGmtbrPBpLRXJTJpDMRnthvkfVgnrWvdpMQGbdfBCkcVBcL">
-          <p className=" lg:hidden lg:translate-y-3 text-[7.5vw]">hello@studioakto.com</p>
+          <p className=" lg:hidden lg:translate-y-3 text-[7.35vw] md:text-[7.6vw]">hello@studioakto.com</p>
         </a>
+      </div>
+      <div className=" w-full center mt-2 md:hidden">
+        <div className='flex md:hidden text-[11px] lg:text-sm gap-1 capitalize'>
+          <p>All rights reserved © StudioAkto   Developed by</p>
+          <a href="https://www.zerrorstudios.com" target="_blank" rel="noopener noreferrer" className=' translate-y-[1px] hover:scale-[.97] transition-all duration-300 underline text-[10px] lg:text-sm uppercase font-semibold'>Zerror studios</a>
+        </div>
       </div>
     </div>
   );
