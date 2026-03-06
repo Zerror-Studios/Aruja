@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 import SeoHeader from '@/components/seo/SeoHeader';
 import { worksData } from '@/store/WorksData';
 import Image from 'next/image';
+import InfiniteMarquee from '@/components/Effects/InfiniteMarquee';
 gsap.registerPlugin(SplitText);
 
 const Index = () => {
@@ -51,48 +52,6 @@ const Index = () => {
     AOS.refresh();
   }, []);
 
-
-  useEffect(() => {
-    const wrapper = scrollWrapper.current;
-    const content = scrollContent.current;
-
-    const lenis = new Lenis({
-      wrapper,
-      content,
-      duration: 1.2,
-      orientation: "horizontal",
-      gestureOrientation: "vertical",
-      easing: (t) => 1 - Math.pow(2, -10 * t),
-      smooth: true,
-      infinite: false,
-    });
-
-    const cloneCount = 3;
-    const originalChildren = Array.from(content.children);
-    for (let i = 0; i < cloneCount - 1; i++) {
-      originalChildren.forEach((child) => {
-        const clone = child.cloneNode(true);
-        content.appendChild(clone);
-      });
-    }
-
-    const totalWidth = content.scrollWidth / cloneCount;
-
-    const raf = (time) => {
-      lenis.raf(time);
-      const scrollLeft = lenis.scroll;
-      if (scrollLeft >= totalWidth) {
-        lenis.scrollTo(scrollLeft - totalWidth, { immediate: true });
-      } else if (scrollLeft <= 0) {
-        lenis.scrollTo(scrollLeft + totalWidth, { immediate: true });
-      }
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
 
   useEffect(() => {
     if (view === "vertical") {
@@ -210,7 +169,7 @@ const Index = () => {
         </div>
 
         <div className="w-full relative   md:flex items-center justify-center ">
-          <div className=" text-base px-3  absolute  top-[8.5vw] md:top-[3vw] z-[99] md:w-fit">
+          <div className=" text-base px-3  absolute  top-[8.5vw] md:top-[3vw] z-[70]! md:w-fit">
             <div className=" w-full md:hidden leading-none font-semibold">
               <div className="block overflow-hidden">
                 <p className='wrk_anim_txt translate-y-[105%] md:w-[60%]'   >Every project at Studio Akto is crafted with flow, proportion, and precision. </p>
@@ -260,33 +219,34 @@ const Index = () => {
           style={{ opacity: 1, display: "flex" }}
         >
           <div
-            ref={scrollWrapper} className="w-full flex justify-start items-end pb-10 md:pb-[1vw] absolute h-[100dvh] z-[9] top-0 left-0 px-3 lg:px-10 pr-3 lg:pr-10 overflow-x-auto scroller_none">
-            <div
-              ref={scrollContent}
-              className=" gap-3 lg:gap-5  flex "
-            >
-              {[...worksData, ...worksData].map((item, idx) => (
-                <div
-                  key={idx}
-                  onClick={() => navigate(router, `/work/${item.id}`)}
-                  className="shrink-0 cursor-pointer w-[80vw] md:w-[45vw] lg:w-[22.8vw] h-full">
-                  <div className="text-base  font-semibold block overflow-hidden mb-2 uppercase">
-                    <p className='wrk_anim_txt hori_wrk_anim_txt_title translate-y-[105%] '>
-                      {item.title}
-                    </p>
-                  </div>
+            ref={scrollWrapper} className="w-full flex justify-start items-end pb-10 md:pb-[1vw] absolute h-[100dvh] z-[9] top-0 left-0 scroller_none">
+            <InfiniteMarquee>
+              <div className="w-full flex ">
+                {worksData.map((item, idx) => (
                   <div
-                    style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
-                    className=" hori_clip_div clip_div w-full h-[250px] overflow-hidden relative">
-                    <img
-                      src={item.HeroImg}
-                      alt="loading"
-                      className="object-cover w-full h-full"
-                    />
+                    // href={`/work/${item.id}`}
+                    key={idx}
+                    onClick={() => navigate(router, `/work/${item.id}`)}
+                    className="shrink-0 relative z-10 ml-5 cursor-pointer w-[80vw] md:w-[45vw] lg:w-[23vw] h-full">
+                    <div className="text-base  font-semibold block overflow-hidden mb-2 uppercase">
+                      <p className='wrk_anim_txt hori_wrk_anim_txt_title translate-y-[105%] '>
+                        {item.title}
+                      </p>
+                    </div>
+                    <div
+                      style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
+                      className=" hori_clip_div clip_div w-full h-[250px] overflow-hidden relative">
+                      <img
+                        draggable="false"
+                        src={item.HeroImg}
+                        alt="loading"
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </InfiniteMarquee>
           </div>
         </div>
 
@@ -312,6 +272,7 @@ const Index = () => {
                 style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
                 className=" ver_clip_div clip_div w-full h-full overflow-hidden relative">
                 <img
+                  draggable="false"
                   data-aos="clip"
                   data-aos-anchor-placement="top-bottom"
                   data-aos-delay={idx * 100}

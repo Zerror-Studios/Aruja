@@ -128,7 +128,7 @@ const Header = () => {
       <div
         onMouseOver={serviceHover}
         onMouseLeave={removeServiceHover}
-        style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" }} className="open_serv_nav fixed pb-10 px-10 top-0 left-0 z-[9] pt-20 overflow-hidden w-full gap-x-5  bg-[#fffdf6]  grid grid-cols-4">
+        style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" }} className="open_serv_nav fixed pb-10 px-10 top-0 left-0 z-[99] pt-20 overflow-hidden w-full gap-x-5  bg-[#fffdf6]  grid grid-cols-4">
         {ServicesData.map((item, i) => (
           <div key={i} onClick={() => navigate(router, `/services/${item.slug}`)} className="w-full inner_services opacity-0 group cursor-pointer">
             <div className="w-full overflow-hidden aspect-[5/3] ">
