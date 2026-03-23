@@ -253,10 +253,10 @@ const index = () => {
                                 height,
                             }}
                         >
-                            <img
+                            <Image
+                                fill
                                 src={item.img}
                                 alt="loading"
-
                                 className="object-cover w-full h-full"
                             />
 
