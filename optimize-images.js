@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
 
-const inputDir = path.resolve("./public/Images/projects/kochi_kochu");
+const inputDir = path.resolve("./public/Images/projects/pottery_studio");
 const outputDir = path.resolve("./public/Images/projects-optimized");
 
 const MAX_SIZE = 100 * 1024;
@@ -43,7 +43,7 @@ async function processFolder(folder) {
 
     const ext = path.extname(item).toLowerCase();
 
-    if ([".png", ".jpg", ".jpeg"].includes(ext)) {
+    if ([".JPG", ".JPEG", ".PNG", ".png", ".jpg", ".jpeg"].includes(ext)) {
       const relativePath = path.relative(inputDir, fullPath);
 
       const outputPath = path.join(

@@ -232,12 +232,17 @@ export const worksData = [
     },
     {
         id: 8,
-        title: "Kochi Kochu",
-        completion_Data: "-",
-        project_location: "-",
-        project_type: "-",
+        title: "Kochi Kochu Office",
+        completion_Data: "2025",
+        project_location: "Jaipur, Rajasthan",
+        project_type: "Renovation",
         project_desc: [
-          
+            "A compact workspace designed to feel open, functional, and thoughtfully curated.",
+            "Clean lines and a restrained material palette create a balance of warmth and simplicity.",
+            "Subtle textures and soft tones add depth without overwhelming the space.",
+            "Custom-designed elements enhance usability while giving the office a distinct identity.",
+            "Efficient layouts ensure smooth movement and optimal use of every corner.",
+            "A calm and cohesive environment that supports focus, interaction, and everyday work."
         ],
         HeroImg: "/Images/projects/kochi_kochu/heroImg.webp",
         images: [
@@ -263,8 +268,15 @@ export const worksData = [
             { type: "portrait", img: "/Images/projects/kochi_kochu/img_20.webp" },
         ],
         tags: [
-         
-        ],
+            "Workspace Design",
+            "Minimal Interior",
+            "Compact Spaces",
+            "Functional Layout",
+            "Custom Design",
+            "Modern Aesthetic",
+            "Spatial Efficiency",
+            "Calm Environment"
+        ]
     },
     {
         id: 9,
@@ -322,38 +334,38 @@ export const worksData = [
             "Contemporary Living"
         ],
     },
-    //   {
-    //     id: 11,
-    //     title: "Laundry House Feature Wall",
-    //     completion_Data: "2024",
-    //     project_location: "Jaipur, Rajasthan",
-    //     project_type: "Renovation/Styling",
-    //     project_desc: [
-    //       "A creative reinterpretation of a feature wall using 3D framed objects.",
-    //       "Adds personality while maintaining balance within the interiors.",
-    //       "Design detailing ensured harmony between objects and finishes.",
-    //       "Executed efficiently alongside ongoing home renovation works.",
-    //     ],
-    // HeroImg: "/Images/projects/vivanta/heroImg.webp",
-    // images: [
-    //     { type: "landscape", img: "/Images/HomePage/cdcs.webp" },
-    //     { type: "landscape", img: "/Images/projects/vivanta/heroImg.webp" },
-    //     { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-    //     { type: "portrait", img: "/Images/HomePage/erec.webp" },
-    //     { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-    //     { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    //     { type: "portrait", img: "/Images/HomePage/FooterImg.webp" },
-    //     { type: "portrait", img: "/Images/HomePage/erec.webp" },
-    //     { type: "landscape", img: "/Images/HomePage/wmdsc.webp" },
-    //     { type: "landscape", img: "/Images/HomePage/FooterImg.webp" },
-    // ],
-    //     tags: [
-    //       "Feature Wall",
-    //       "3D Installation",
-    //       "Creative Styling",
-    //       "Balanced Design",
-    //       "Detail Coordination",
-    //       "Home Integration"
-    //     ],
-    //   },
+    {
+        id: 11,
+        title: "Pottery Studio",
+        completion_Data: "2026",
+        project_location: "Delhi NCR",
+        project_type: "New Build",
+        project_desc: [
+            "A tactile studio space designed to celebrate the raw, hands-on nature of pottery.",
+            "An earthy, muted palette combined with natural textures creates a grounded and immersive environment.",
+            "Open yet intuitive layouts allow seamless movement between shaping, drying, and display zones.",
+            "Movable shelving systems introduce flexibility, adapting the space to evolving creative needs.",
+            "A built-in materials library within the mirror frame transforms functionality into an inspiring display.",
+        ],
+        HeroImg: "/Images/projects/pottery_studio/heroImg.webp",
+        images: [
+            { type: "portrait", img: "/Images/projects/pottery_studio/img_1.webp" },
+            { type: "portrait", img: "/Images/projects/pottery_studio/img_2.webp" },
+            { type: "landscape", img: "/Images/projects/pottery_studio/img_3.webp" },
+            { type: "portrait", img: "/Images/projects/pottery_studio/img_4.webp" },
+            { type: "portrait", img: "/Images/projects/pottery_studio/img_5.webp" },
+            { type: "portrait", img: "/Images/projects/pottery_studio/img_6.webp" },
+            { type: "portrait", img: "/Images/projects/pottery_studio/img_7.webp" },
+        ],
+        tags: [
+            "Pottery Studio",
+            "Tactile Design",
+            "Earthy Aesthetic",
+            "Flexible Spaces",
+            "Material Exploration",
+            "Creative Workspace",
+            "Adaptive Design",
+            "Craft Environment"
+        ],
+    },
 ];
