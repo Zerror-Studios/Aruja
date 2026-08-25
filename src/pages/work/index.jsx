@@ -52,7 +52,6 @@ const Index = () => {
     AOS.refresh();
   }, []);
 
-
   useEffect(() => {
     if (view === "vertical") {
 
@@ -237,7 +236,7 @@ const Index = () => {
                       style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
                       className=" hori_clip_div clip_div w-full h-[250px] overflow-hidden relative">
                       <Image
-                      fill
+                        fill
                         draggable="false"
                         src={item.HeroImg}
                         alt="loading"
@@ -273,7 +272,7 @@ const Index = () => {
                 style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", }}
                 className=" ver_clip_div clip_div w-full h-full overflow-hidden relative">
                 <Image
-                fill
+                  fill
                   draggable="false"
                   data-aos="clip"
                   data-aos-anchor-placement="top-bottom"

@@ -68,8 +68,7 @@ const index = () => {
 
         if (window.innerWidth >= 1024) {
             gsap.to(".paex_img", {
-                y: 500,
-                duration: 4,
+                y: 300,
                 ease: "linear",
                 scrollTrigger: {
                     trigger: ".stic_image_pent",
